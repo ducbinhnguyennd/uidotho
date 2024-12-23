@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className="top-bar">
       <div className="top-bar-left">
-        <MdLocationOn style={{ color: "#334862", fontSize: "24px", display: "inline-block" }} />
+        <MdLocationOn style={{ color: "#334862", fontSize: "20px", display: "inline-block" }} />
         <p className="contact-name">
           ĐỒ THỜ CÔNG HƯƠNG, ngã ba Cát Đằng, Yên Tiến, Ý Yên, Nam Định
         </p>
@@ -16,7 +16,7 @@ const Contact = () => {
 
       <div className="top-bar-right">
         <p className="contact-phone">
-          Liên hệ: <span style={{color: 'red'}}>02122322</span>
+          Liên hệ: <span style={{color: 'red', fontWeight: 'bold'}}>02122322</span>
         </p>
       </div>
       <div className="clear"></div>

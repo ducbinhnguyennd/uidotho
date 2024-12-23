@@ -1,38 +1,26 @@
 import React from 'react'
 import './Header.scss' // Import file CSS để style
 import { useNavigate } from 'react-router-dom'
+import { FaSearch } from "react-icons/fa";
 const Header = () => {
   const navigate = useNavigate()
   return (
     <div className='header-container'>
       <div className='header-left'>
-        <img
-          src='https://cdn2.fptshop.com.vn/unsafe/150x0/filters:quality(100)/small/logo_main_3_0353466848.png'
-          alt='Logo'
-          className='header-logo'
-          onClick={() => navigate('/')} 
-        />
-        <button className='menu-button'>
-          Danh mục
-        </button>
+      <img
+            src="/logo.png"
+            alt="Logo"
+            className="logo"
+          />
       </div>
-      <div className='header-center'>
+      <div className='header-right'>
         <input
           type='text'
           className='search-input'
-          placeholder='Nhập tên điện thoại, máy tính, phụ kiện... cần tìm'
+          placeholder='Tìm kiếm'
         />
         <button className='search-button'>
-        s
-        </button>
-      </div>
-      <div className='header-right'>
-        <button className='user-button'>
-          s
-        </button>
-
-        <button className='cart-button' onClick={() => navigate('/cart')}>
-       giỏ hàng
+        <FaSearch style={{ color: "#fff", fontSize: "20px", display: "inline-block" }} />
         </button>
       </div>
     </div>
