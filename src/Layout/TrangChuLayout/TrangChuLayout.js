@@ -3,7 +3,7 @@ import "./TrangChuLayout.scss";
 import Loading from "../../components/Loading/Loading";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import  Carousel from "../Carousel/Carousel";
+import Carousel from "../Carousel/Carousel";
 function TrangChuLayout() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ function TrangChuLayout() {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     alert(`${product.name} đã được thêm vào giỏ hàng!`);
   };
- 
+
   return (
     <div>
       {isLoading && <Loading />}
@@ -45,7 +45,10 @@ function TrangChuLayout() {
               <div className="title-product">
                 <p className="namesp">{item.name}</p>
                 <a href="#" className="see-all">
-                  <p className="text-see-all">Xem tất cả</p>
+                  <Link to={`/san-pham/${item.name}`}>
+                    <p className="text-see-all">Xem tất cả</p>
+
+                  </Link>
                   <MdKeyboardArrowRight
                     style={{
                       color: "#ffffffbe",
@@ -59,6 +62,7 @@ function TrangChuLayout() {
 
               <div className="divsp">
                 {item.sanpham.map((sanpham) => (
+
                   <div className="divtungsp" key={sanpham.name}>
                     <div className="discount">
                       <p className="number-discount">13%</p>
@@ -66,13 +70,14 @@ function TrangChuLayout() {
                     <img src={`${sanpham.image}`} alt="" />
                     <div>{sanpham.name}</div>
                     <div className="original-price">Giá gốc: <span>50.000.000đ</span></div>
-                    <div>
+                    <div className="price">
                       {sanpham.price.toLocaleString()} đ
                     </div>
                     <Link to={`/chitietsanpham/${sanpham.namekhongdau}`}>
                       <button className="btnthemgiohang">Xem chi tiết</button>
-                    </Link>                   
+                    </Link>
                   </div>
+
                 ))}
               </div>
             </div>
