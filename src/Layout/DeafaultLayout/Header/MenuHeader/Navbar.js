@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.scss"; // Đảm bảo bạn tạo file CSS riêng để quản lý style
+import "./Navbar.scss";
 
 const Navbar = ({ onMenuSelect }) => {
-  const handleSubmenuClick = (content) => {
-    if (onMenuSelect) {
-      onMenuSelect(content);
-    }
-  };
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch("https://baominh.shop/theloaisanpham");
+        const data = await response.json();
+        setCategories(data);
+      } catch (error) {
+        console.error("Lỗi khi gọi API:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  const slugify = (text) =>
+    text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-") 
+      .replace(/^-+|-+$/g, ""); 
 
   return (
     <nav className="navbar">
@@ -18,19 +36,19 @@ const Navbar = ({ onMenuSelect }) => {
               <i className="fas fa-bars"></i> Danh mục sản phẩm
             </span>
             <ul className="submenu">
-              <li onClick={() => handleSubmenuClick("Nội dung Tượng Phật")}>
-                <Link to="/cart">TƯỢNG PHẬT</Link>
-              </li>
-              <li onClick={() => handleSubmenuClick("Nội dung Tượng Quan Âm")}>
-                <Link to="/thanhcong">TƯỢNG PHẬT QUAN ÂM</Link>
-              </li>
-              <li onClick={() => handleSubmenuClick("Nội dung Tượng Di Lặc")}>
-                <Link to="/tuong-di-lac">TƯỢNG PHẬT DI LẶC</Link>
-              </li>
+              {categories.map((category) => (
+                <li
+                  key={category._id}
+                  onClick={() => onMenuSelect && onMenuSelect(category.name)}
+                >
+                   <Link to={`/san-pham/${slugify(category.name)}`}>
+                    {category.name.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
 
-          {/* Các mục khác */}
           <li className="menu-item">
             <Link to="/">TRANG CHỦ</Link>
           </li>
