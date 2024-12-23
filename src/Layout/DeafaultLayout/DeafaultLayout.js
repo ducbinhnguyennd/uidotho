@@ -9,10 +9,12 @@ import '../DeafaultLayout/DefaultLayout.scss'
 
 function DefaultLayout({ children }) {
   return (
-    <div className="container">
+    <div className="container-default">
       <Contact />
-      <Header />
-      <Navbar />
+      <div className="header-navbar">
+  <Header />
+  <Navbar />
+</div>
       <div className="content">{children}</div>
       <Footer />
       <div className="floatingbuton">

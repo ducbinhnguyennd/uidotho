@@ -1,16 +1,16 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect } from "react";
 import "./TrangChuLayout.scss";
 import Loading from "../../components/Loading/Loading";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import  Carousel from "../Carousel/Carousel";
 function TrangChuLayout() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchdata = async () => {
     try {
-      setIsLoading(true); // Bắt đầu loading
+      setIsLoading(true);
       const response = await fetch("https://baominh.shop/sanpham");
       const data = await response.json();
       if (response.ok) {
@@ -19,7 +19,7 @@ function TrangChuLayout() {
     } catch (error) {
       console.log(error);
     } finally {
-      setIsLoading(false); // Kết thúc loading
+      setIsLoading(false);
     }
   };
 
@@ -39,8 +39,9 @@ function TrangChuLayout() {
       {isLoading && <Loading />}
       {!isLoading && (
         <div>
+          <Carousel />
           {data.map((item) => (
-            <div style={{ marginTop: "70px" }} key={item.name}>
+            <div key={item.name}>
               <div className="title-product">
                 <p className="namesp">{item.name}</p>
                 <p className="namesp">{item.namekhongdau}</p>
@@ -71,8 +72,7 @@ function TrangChuLayout() {
                     </h3>
                     <Link to={`/chitietsanpham/${sanpham.namekhongdau}`}>
                       <button className="btnthemgiohang">Xem chi tiết</button>
-                    </Link>
-                   
+                    </Link>                   
                   </div>
                 ))}
               </div>

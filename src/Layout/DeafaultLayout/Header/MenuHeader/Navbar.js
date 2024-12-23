@@ -4,6 +4,8 @@ import "./Navbar.scss";
 
 const Navbar = ({ onMenuSelect }) => {
   const [categories, setCategories] = useState([]);
+  const [menuOpen, setMenuOpen] = useState(false); // Kiểm soát menu chính
+  const [submenuOpen, setSubmenuOpen] = useState(false); // Kiểm soát menu con
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -19,30 +21,45 @@ const Navbar = ({ onMenuSelect }) => {
     fetchCategories();
   }, []);
 
-
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <ul className="menu">
-          <li className="menu-item has-submenu">
-            <span className="menu-title">
+        <div className="navbar-left">
+          <img src="/logo.png" alt="Logo" className="logo" />
+        </div>
+        <div
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
+        <ul className={`menu ${menuOpen ? "menu-open" : ""}`}>
+          <li
+            className={`menu-item has-submenu ${
+              submenuOpen ? "submenu-active" : ""
+            }`}
+            onMouseEnter={() => setSubmenuOpen(true)}
+            onMouseLeave={() => setSubmenuOpen(false)}
+          >
+            <span
+              className="menu-title"
+              onClick={() => setSubmenuOpen(!submenuOpen)}
+            >
               <i className="fas fa-bars"></i> Danh mục sản phẩm
             </span>
-            <ul className="submenu">
+            <ul className={`submenu ${submenuOpen ? "submenu-open" : ""}`}>
               {categories.map((category) => (
                 <li
                   key={category._id}
                   onClick={() => onMenuSelect && onMenuSelect(category.name)}
                 >
-                   <Link to={`/san-pham/${category.namekhongdau}`}>
+                  <Link to={`/san-pham/${category.namekhongdau}`}>
                     {category.name.toUpperCase()}
                   </Link>
                 </li>
               ))}
             </ul>
           </li>
-
           <li className="menu-item">
             <Link to="/">TRANG CHỦ</Link>
           </li>
