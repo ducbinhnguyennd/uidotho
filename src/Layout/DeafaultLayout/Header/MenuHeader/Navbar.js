@@ -19,13 +19,7 @@ const Navbar = ({ onMenuSelect }) => {
     fetchCategories();
   }, []);
 
-  const slugify = (text) =>
-    text
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9]+/g, "-") 
-      .replace(/^-+|-+$/g, ""); 
+
 
   return (
     <nav className="navbar">
@@ -41,7 +35,7 @@ const Navbar = ({ onMenuSelect }) => {
                   key={category._id}
                   onClick={() => onMenuSelect && onMenuSelect(category.name)}
                 >
-                   <Link to={`/san-pham/${slugify(category.name)}`}>
+                   <Link to={`/san-pham/${category.namekhongdau}`}>
                     {category.name.toUpperCase()}
                   </Link>
                 </li>

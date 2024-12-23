@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./TrangChuLayout.scss";
 import Loading from "../../components/Loading/Loading";
 import { MdKeyboardArrowRight } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 function TrangChuLayout() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ function TrangChuLayout() {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     alert(`${product.name} đã được thêm vào giỏ hàng!`);
   };
-
+ 
   return (
     <div>
       {isLoading && <Loading />}
@@ -44,6 +44,7 @@ function TrangChuLayout() {
             <div style={{ marginTop: "70px" }} key={item.name}>
               <div className="title-product">
                 <p className="namesp">{item.name}</p>
+                <p className="namesp">{item.namekhongdau}</p>
                 <a href="#" className="see-all">
                   <p className="text-see-all">Xem tất cả</p>
                   <MdKeyboardArrowRight
@@ -60,16 +61,13 @@ function TrangChuLayout() {
 
               <div className="divsp">
                 {item.sanpham.map((sanpham) => (
-                  <div className="divtungsp" key={sanpham.name}>
+                  <div className="divtungsp" key={sanpham._id}>
                     <img src={`${sanpham.image}`} alt="" />
                     <h5>{sanpham.name}</h5>
                     <h5>{sanpham.price.toLocaleString()} đ</h5>
-                    <button
-                      className="btnthemgiohang"
-                      onClick={() => handleAddToCart(sanpham)}
-                    >
-                      Thêm vào giỏ hàng
-                    </button>
+                    <Link to={`/chitietsanpham/${sanpham.namekhongdau}`}>
+                      <button className="btnthemgiohang">Xem chi tiết</button>
+                    </Link>
                   </div>
                 ))}
               </div>
