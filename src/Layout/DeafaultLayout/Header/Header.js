@@ -13,7 +13,6 @@ const Header = () => {
           onClick={() => navigate('/')} 
         />
         <button className='menu-button'>
-      
           Danh mục
         </button>
       </div>

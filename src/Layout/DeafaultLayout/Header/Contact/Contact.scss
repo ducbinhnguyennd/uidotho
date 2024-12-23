@@ -1,0 +1,52 @@
+// .clear {
+//   clear: both;
+// }
+
+// .top-bar {
+//   background-color: rgba(254, 205, 165, 0.3);
+  
+// }
+
+// .contact-name {
+//   color: #334862;
+//   display: inline-block;
+// }
+
+// .top-bar-left {
+//   display: inline-block;
+// }
+
+// .top-bar-right {
+//   float: right;
+// }
+
+.clear {
+    clear: both;
+  }
+  
+  .top-bar {
+    height: 31px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgba(254, 205, 165, 0.3);
+
+  }
+  
+  .contact-name {
+    color: #334862;
+    line-height: 31px;
+  }
+  
+  .top-bar-left {
+    align-items: center; 
+  }
+  
+  .top-bar-left .contact-name {
+    margin-left: 8px; 
+  }
+  
+  .top-bar-right {
+    font-size: 16px;
+  }
+  
