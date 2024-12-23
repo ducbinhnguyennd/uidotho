@@ -13,7 +13,7 @@ const Footer = () => {
           <img
             src="https://dogovinhdinh.vn/wp-content/uploads/2020/09/vinh-dinh-logo-800x223.png"
 
-            alt="Vinh Đỉnh Logo"
+            alt="Logo"
             className= 'logo'
           />
           <p>ĐỒ GỖ CÔNG HƯƠNG, ngã 3 Cát Đằng, Xã Yên Tiến, Huyên Ý Yên, Tỉnh Nam Định</p>
@@ -51,7 +51,7 @@ const Footer = () => {
         <div className= 'column'>
           <h3>GIỚI THIỆU</h3>
           <p>
-            Đồ gỗ Vinh Đỉnh là website giới thiệu các sản phẩm về đồ gỗ dưới sự sáng tạo, tinh tế dưới bàn tay nghệ nhân thương hiệu Vinh Đỉnh.
+            Đồ gỗ Công Hương là website giới thiệu các sản phẩm về đồ gỗ dưới sự sáng tạo, tinh tế dưới bàn tay nghệ nhân thương hiệu Công Hương.
           </p>
           <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
           <div className= 'socialIcons'>
