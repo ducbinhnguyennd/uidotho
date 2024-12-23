@@ -40,7 +40,6 @@ function TrangChuLayout() {
       {!isLoading && (
         <div>
           {data.map((item) => (
-
             <div style={{ marginTop: "70px" }} key={item.name}>
               <div className="title-product">
                 <p className="namesp">{item.name}</p>
@@ -57,18 +56,23 @@ function TrangChuLayout() {
                 </a>
               </div>
 
-
               <div className="divsp">
                 {item.sanpham.map((sanpham) => (
                   <div className="divtungsp" key={sanpham.name}>
+                    <div className="discount">
+                      <p className="number-discount">13%</p>
+                    </div>
                     <img src={`${sanpham.image}`} alt="" />
-                    <h5>{sanpham.name}</h5>
-                    <h5>{sanpham.price.toLocaleString()} đ</h5>
+                    <h4>{sanpham.name}</h4>
+                    <p className="original-price">Giá gốc: <span>50.000.000đ</span></p>
+                    <h3 style={{ color: "red" }}>
+                      {sanpham.price.toLocaleString()} đ
+                    </h3>
                     <button
                       className="btnthemgiohang"
                       onClick={() => handleAddToCart(sanpham)}
                     >
-                      Thêm vào giỏ hàng
+                      Chi tiết
                     </button>
                   </div>
                 ))}

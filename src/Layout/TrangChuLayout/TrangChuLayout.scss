@@ -24,10 +24,10 @@
 }
 
 .see-all {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .text-see-all {
@@ -44,6 +44,7 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
+  text-align: center;
   /* Để đặt nút thêm vào giỏ hàng ở vị trí tuyệt đối bên trong */
 
   img {
@@ -53,10 +54,24 @@
   }
 
   /* Hiệu ứng hiển thị nút khi hover */
-  &:hover .btnthemgiohang {
-    opacity: 1;
-    /* Hiển thị nút khi hover */
-  }
+}
+
+.divtungsp .discount {
+  position: absolute;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  margin: 30px 0 0 15px;
+  background-color: #8c6c3f;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.divtungsp .discount .number-discount {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .divpropsp {
@@ -79,16 +94,28 @@
 }
 
 .btnthemgiohang {
-  width: 100%;
   position: absolute;
+  font-weight: bold;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  opacity: 0;
+  padding: 10px 20px;
+  color: #8c6c3f;
+  border: #8c6c3f solid 3px;
   transition: opacity 0.3s ease;
   cursor: pointer;
+}
+
+.btnthemgiohang:hover {
+  background-color: #8c6c3f;
+  color: #fff;
+}
+
+.original-price {
+    color: #000;
+}
+
+.original-price span{
+    color: #ccc;
+    text-decoration: line-through;
 }
