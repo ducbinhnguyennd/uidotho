@@ -3,7 +3,6 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 12%;
   justify-items: center;
 }
@@ -37,7 +36,7 @@
 }
 
 .divtungsp {
-  height: 500px;
+  height: 450px;
   padding: 10px;
   overflow: hidden;
   border-radius: 15px;
@@ -146,6 +145,6 @@
   }
 
   .btnthemgiohang {
-    bottom: 20px; /* Adjust button position to be below content */
+    display: none;
   }
 }

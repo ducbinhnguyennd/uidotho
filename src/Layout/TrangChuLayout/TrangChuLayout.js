@@ -44,7 +44,6 @@ function TrangChuLayout() {
             <div key={item.name}>
               <div className="title-product">
                 <p className="namesp">{item.name}</p>
-                <p className="namesp">{item.namekhongdau}</p>
                 <a href="#" className="see-all">
                   <p className="text-see-all">Xem tất cả</p>
                   <MdKeyboardArrowRight
@@ -65,11 +64,11 @@ function TrangChuLayout() {
                       <p className="number-discount">13%</p>
                     </div>
                     <img src={`${sanpham.image}`} alt="" />
-                    <h4>{sanpham.name}</h4>
-                    <p className="original-price">Giá gốc: <span>50.000.000đ</span></p>
-                    <h3 style={{ color: "red" }}>
+                    <div>{sanpham.name}</div>
+                    <div className="original-price">Giá gốc: <span>50.000.000đ</span></div>
+                    <div>
                       {sanpham.price.toLocaleString()} đ
-                    </h3>
+                    </div>
                     <Link to={`/chitietsanpham/${sanpham.namekhongdau}`}>
                       <button className="btnthemgiohang">Xem chi tiết</button>
                     </Link>                   
