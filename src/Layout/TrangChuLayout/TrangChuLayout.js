@@ -40,6 +40,7 @@ function TrangChuLayout() {
       {!isLoading && (
         <div>
           {data.map((item) => (
+
             <div style={{ marginTop: "70px" }} key={item.name}>
               <div className="title-product">
                 <p className="namesp">{item.name}</p>
@@ -55,16 +56,14 @@ function TrangChuLayout() {
                   />
                 </a>
               </div>
+
+
               <div className="divsp">
                 {item.sanpham.map((sanpham) => (
                   <div className="divtungsp" key={sanpham.name}>
                     <img src={`${sanpham.image}`} alt="" />
                     <h5>{sanpham.name}</h5>
                     <h5>{sanpham.price.toLocaleString()} đ</h5>
-                    {/* <div className="divpropsp">
-                      <h5>Chip:</h5>
-                      <p>{sanpham.chip}</p>
-                    </div> */}
                     <button
                       className="btnthemgiohang"
                       onClick={() => handleAddToCart(sanpham)}
