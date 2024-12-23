@@ -4,28 +4,43 @@ import { FaFacebook } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { SiZalo } from "react-icons/si";
 import { IoMdCall } from "react-icons/io";
-
 const Footer = () => {
   return (
     <div className='footer'>
-      <div className= 'container'>
-        <div className= 'column'>
+      <div className='container'>
+        <div className='column'>
           <img
-            src="https://dogovinhdinh.vn/wp-content/uploads/2020/09/vinh-dinh-logo-800x223.png"
-
+            src="/logo.png"
             alt="Logo"
-            className= 'logo'
+            className="logo"
           />
-          <p>ĐỒ GỖ CÔNG HƯƠNG, ngã 3 Cát Đằng, Xã Yên Tiến, Huyên Ý Yên, Tỉnh Nam Định</p>
+          <p>ĐỒ GỖ CÔNG HƯƠNG</p>
+          <div className="address-container">
+          <a href="https://maps.app.goo.gl/z3xmqsCTZzZCacS4A"
+            target="_blank"
+            rel="noopener noreferrer" className="address">
+            Cơ sở 1: Ngã 3 Cát Đằng, Xã Yên Tiến, Huyện Ý Yên, Tỉnh Nam Định
+          </a>
+          <br/>
+          <br/>
+          <a href="https://maps.app.goo.gl/KZkD3xqo1Mgpsypt8"
+            target="_blank"
+            rel="noopener noreferrer" className="address">
+            Cơ sở 2: Ngã 3 Cát Đằng đi về hướng Ninh Bình 300m, Xã Yên Tiến, Huyên Ý Yên, Tỉnh Nam Định
+          </a>
+          </div>
           <p>
-          <IoMdCall/> 0985965784
+            <IoMdCall /> 0985.965.784 - 0982.560.805
           </p>
           <p>
-          <IoMdMail/> ducbinhnguyennd@gmail.com
+            <IoMdMail /> ducbinhnguyennd@gmail.com
           </p>
         </div>
+        <div style={{ display: 'flex', height: '500px', alignItems: 'center' }}>
 
-        <div className= 'column'>
+          <div class="crack-column"></div>
+        </div>
+        <div className='column'>
           <h3>THÔNG TIN</h3>
           <ul>
             <li>Về chúng tôi</li>
@@ -46,19 +61,21 @@ const Footer = () => {
           </form>
         </div>
 
-        
 
-        <div className= 'column'>
+        <div style={{ display: 'flex', height: '500px', alignItems: 'center' }}>
+          <div class="crack-column"></div>
+        </div>
+        <div className='column'>
           <h3>GIỚI THIỆU</h3>
           <p>
             Đồ gỗ Công Hương là website giới thiệu các sản phẩm về đồ gỗ dưới sự sáng tạo, tinh tế dưới bàn tay nghệ nhân thương hiệu Công Hương.
           </p>
           <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
-          <div className= 'socialIcons'>
-          <FaFacebook className="icons" /> 
-           <IoMdMail className="icons"/>
-           <IoMdCall className="icons"/>
-           <SiZalo className="icons"/>
+          <div className='socialIcons'>
+            <FaFacebook className="icons" />
+            <IoMdMail className="icons" />
+            <IoMdCall className="icons" />
+            <SiZalo className="icons" />
           </div>
         </div>
       </div>
