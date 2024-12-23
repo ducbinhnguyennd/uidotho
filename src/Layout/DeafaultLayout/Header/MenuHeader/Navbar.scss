@@ -1,0 +1,84 @@
+/* Tổng quan */
+.navbar {
+    background-color: #8c6c3f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    position: relative;
+    margin: 0 15px;
+  }
+  
+  .menu-title {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .menu-item.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    color: #333;
+    list-style: none;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-item.has-submenu:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li {
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  
+  .submenu li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .submenu li:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+    }
+    .menu-item {
+      margin: 10px 0;
+    }
+  }
+  

@@ -1,17 +1,16 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/style-prop-object */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/alt-text */
+import React from 'react';
+import Navbar from './Header/MenuHeader/Navbar';
+import { Footer } from './Footer';
+import  {Header}  from './Header';
+import  Contact  from './Header/Contact/Contact';
 
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import Contact from "./Header/Contact/Contact";
 function DefaultLayout({ children }) {
   return (
     <div className="container">
-      <Contact />
-      <Header />
-      {children}
+      <Contact/>
+      <Header/>
+      <Navbar />
+      <div className="content">{children}</div>
       <Footer />
     </div>
   );
