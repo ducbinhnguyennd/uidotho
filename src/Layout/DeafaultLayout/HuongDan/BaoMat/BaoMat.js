@@ -9,11 +9,11 @@ const BaoMat = () => {
         alt="Logo"
         className="img-bao-mat"
       />
-      <p className="description">
+      <div className="baomat-description">
         Chính sách bảo mật thông tin khách hàng của chúng tôi cụ thể như sau:
-      </p>
-      <h2 className="bao-mat-subtitle">1. Thu nhập thông tin cá nhân</h2>
-      <p className="description">
+      </div>
+      <div className="bao-mat-subtitle">1. Thu nhập thông tin cá nhân</div>
+      <div className="baomat-description">
         Các thông tin cá nhân của khách hàng được thu thập thông qua website Đồ
         thờ Công Hương sẽ giúp chúng tôi:
         <ul className="baomat-list1">
@@ -31,8 +31,8 @@ const BaoMat = () => {
             vụ của chúng tôi.
           </li>
         </ul>
-      </p>
-      <h2 className="bao-mat-subtitle">2. Sử dụng thông tin cá nhân</h2>
+      </div>
+      <div className="bao-mat-subtitle">2. Sử dụng thông tin cá nhân</div>
       <ul className="baomat-list2">
         <li>
           Website Đồ gỗ Vinh Đính thu thập và sử dụng thông tin cá nhân quý
@@ -46,7 +46,7 @@ const BaoMat = () => {
         </li>
       </ul>
 
-      <h2 className="bao-mat-subtitle">3. Chia sẻ thông tin cá nhân</h2>
+      <div className="bao-mat-subtitle">3. Chia sẻ thông tin cá nhân</div>
       <ul className="baomat-list3">
         <li>
           Ngoại trừ các trường hợp về sử dụng thông tin cá nhân như đã nêu trong
@@ -62,7 +62,7 @@ const BaoMat = () => {
         </li>
       </ul>
 
-      <h2 className="bao-mat-subtitle">4. Thay đổi về chính sách</h2>
+      <div className="bao-mat-subtitle">4. Thay đổi về chính sách</div>
       <ul className="baomat-list4">
         <li>
           Chúng tôi hoàn toàn có thể thay đổi nội dung trong trang này mà không
@@ -86,13 +86,16 @@ const BaoMat = () => {
           từng website mà bạn đang truy cập.
         </li>
       </ul>
-      <h2 className="bao-mat-subtitle">5. Thông tin liên hệ</h2>
-      <p className="description">
+      <div className="bao-mat-subtitle">5. Thông tin liên hệ</div>
+      <div className="baomat-description">
         Chúng tôi luôn hoan nghênh các ý kiến đóng góp và phản hồi thông tin từ
         quý khách hàng về “Chính sách bảo mật” này. Nếu quý khách có những thắc
-        mắc liên quan xin vui lòng <a href="#lien-he">liên hệ với chúng tôi</a>{" "}
+        mắc liên quan xin vui lòng{" "}
+        <a href="/lien-he" style={{ color: "red", textDecoration: "none" }}>
+          liên hệ với chúng tôi
+        </a>{" "}
         để được giải đáp.
-      </p>
+      </div>
     </div>
   );
 };

@@ -7,43 +7,25 @@
     line-height: 1.8;
   }
   
-  .title {
+  .muahang-title {
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
     margin-bottom: 20px;
   }
-  
-  h3 {
-    margin-top: 20px;
-  }
-  
-  p {
-    margin: 10px 0;
-  }
-  
-  .note {
-    color: red;
-    font-style: italic;
-  }
-  
-  strong {
+
+  .muahang-subtitle {
+    font-size: 18px;
     font-weight: bold;
   }
   
-  a {
+  .muahang-red {
     color: red;
     text-decoration: none;
   }
   
-  a:hover {
+  .muahang-red:hover {
     text-decoration: underline;
   }
-  
-  ul {
-    margin-top: 10px;
-    padding-left: 20px;
-  }
-  
-  li {
-    margin-bottom: 8px;
-  }
+
   

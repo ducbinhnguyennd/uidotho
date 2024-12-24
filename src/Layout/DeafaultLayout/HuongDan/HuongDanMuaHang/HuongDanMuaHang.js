@@ -4,9 +4,9 @@ import "./HuongDanMuaHang.scss";
 const HuongDanMuaHang = () => {
   return (
     <div id="huong-dan-mua-hang">
-      <h2 className="title">HƯỚNG DẪN MUA HÀNG</h2>
+      <div className="muahang-title">HƯỚNG DẪN MUA HÀNG</div>
 
-      <h3>1. ĐẶT HÀNG QUA WEBSITE:</h3>
+      <div className="muahang-subtitle">1. ĐẶT HÀNG QUA WEBSITE:</div>
       <p>
         <strong>Bước 1:</strong> Quý khách xem sản phẩm tại website, sau đó chọn
         sản phẩm cần mua rồi bấm vào nút MUA HÀNG. Quý khách nhập đầy đủ thông
@@ -17,7 +17,7 @@ const HuongDanMuaHang = () => {
         <strong>Bước 2:</strong> Sau khi quý khách gửi đơn hàng và chúng tôi gọi
         điện thoại xác nhận, tùy vào đơn hàng mà chúng tôi sẽ yêu cầu quý khách
         đặt cọc để tránh tình trạng bom hàng.{" "}
-        <a href="/huong-dan-thanh-toan">Hướng dẫn chuyển khoản qua ngân hàng</a>. Bên cạnh đó chúng tôi cũng khuyến
+        <a href="/huong-dan-thanh-toan" className="muahang-red">Hướng dẫn chuyển khoản qua ngân hàng</a>. Bên cạnh đó chúng tôi cũng khuyến
         khích quý vị liên lạc qua zalo hoặc Facebook messenger để dễ dàng trao
         đổi đầy đủ nhất về thông tin sản phẩm.
       </p>
@@ -28,14 +28,14 @@ const HuongDanMuaHang = () => {
         những đơn hàng có vị trí gần chúng tôi sẽ vận chuyển bằng ô tô. Nhân
         viên giao hàng sẽ thu nốt số tiền còn lại khi bàn giao sản phẩm trực
         tiếp tại nhà cho khách hàng.{" "}
-        <a href="/chinh-sach-van-chuyen">Xem chính sách vận chuyển tại đây</a>.
+        <a href="/chinh-sach-van-chuyen" className="muahang-red">Xem chính sách vận chuyển tại đây</a>.
       </p>
       <p>
         <strong>Bước 4:</strong> Khách hàng được mở kiểm tra sản phẩm trước khi
         thanh toán. Nếu cần phản ánh bất cứ điều gì về sản phẩm cũng như dịch
         vụ vận chuyển, quý khách vui lòng gọi ngay cho chúng tôi theo số{" "}
         <strong>Hotline: 0387988996</strong>.{" "}
-        <a href="/doi-tra">Xem thêm quy định đổi trả sản phẩm tại đây</a>.
+        <a href="/doi-tra" className="muahang-red">Xem thêm quy định đổi trả sản phẩm tại đây</a>.
       </p>
       <p>
         <strong>Lưu ý:</strong> Tên sản phẩm luôn đi kèm với kích thước theo thứ
@@ -44,7 +44,7 @@ const HuongDanMuaHang = () => {
         34cm.
       </p>
 
-      <h3>2. ĐẶT HÀNG QUA ĐIỆN THOẠI:</h3>
+      <div className="muahang-subtitle">2. ĐẶT HÀNG QUA ĐIỆN THOẠI:</div>
       <p>
         <strong>Bước 1:</strong> Quý khách gọi vào số{" "}
         <strong>Hotline: 0387988996</strong> và vui lòng cung cấp cho chúng tôi

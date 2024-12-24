@@ -4,11 +4,11 @@ import "./LienHe.scss";
 const LienHe = () => {
     return (
         <div id="lienHe">
-            <h2 className="title">Liên hệ</h2>
+            <div className="lienhe-title">Liên hệ</div>
             <div className="contact-info">
-                <h4>
+                <div id="name-contact">
                     Cửa hàng <span className="red">Đồ thờ Công Hương</span>
-                </h4>
+                </div>
                 <p className="description">
                     Địa chỉ: Ngã ba Cát Đằng, Yên Tiến, Ý Yên, Nam Định
                 </p>
