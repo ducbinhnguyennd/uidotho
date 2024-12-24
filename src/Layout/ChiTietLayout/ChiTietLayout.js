@@ -4,8 +4,8 @@ import "./ChiTietLayout.scss";
 
 const ChiTietLayout = () => {
   const { tieude } = useParams(); // Lấy "tieude" từ URL
-  const [product, setProduct] = useState(null); 
-  const [isLoading, setIsLoading] = useState(true); 
+  const [product, setProduct] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -41,20 +41,29 @@ const ChiTietLayout = () => {
 
   return (
     <div className="container">
-      <header>
+      {/* <header>
         <h1>{product.name}</h1>
-      </header>
+      </header> */}
       <div className="main">
         <div className="product-detail">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="product-image"
-          />
+          <div className="product-image">
+            <div className="chitiet-discount">
+              <div className="chitiet-number-discount">13%</div>
+            </div>
+            <img src={product.image} alt={product.name} className="pdt-img" />
+
+          </div>
+
           <div className="product-info">
-            <h2>{product.name}</h2>
+            <p className="product-name">{product.name}</p>
             <p className="price">
-              Giá: <span className="current-price">{product.price.toLocaleString()} đ</span>
+              Giá:{" "}
+              <span className="old-price">
+                {product.price.toLocaleString()} đ
+              </span> {" "}
+              <span className="current-price">
+                {product.price.toLocaleString()} đ
+              </span>
             </p>
             <p className="description">{product.mota}</p>
             <div className="buttons">

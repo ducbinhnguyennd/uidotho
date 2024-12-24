@@ -1,7 +1,7 @@
-.container123 {
+.container {
     font-family: Arial, sans-serif;
     max-width: 1200px;
-  
+   margin: auto;
   }
   
   header {
@@ -12,36 +12,69 @@
   .main {
     display: flex;
     gap: 20px;
+    padding: 20px 0;
   }
   
   .product-detail {
-    flex: 3;
     display: flex;
     gap: 20px;
+    width: 100%;
   }
   
   .product-image {
-    width: 250px;
+    flex: 1;
+    position: relative;
+  }
+  .product-image .pdt-img{
+    width: 100%;
     height: auto;
   }
   
+  .product-image .chitiet-discount {
+    position: absolute;
+    margin: 30px 0 0 15px;
+    background-color: #8c6c3f;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-image .chitiet-discount .chitiet-number-discount {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
   .product-info {
     flex: 1;
   }
   
+  .product-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #666;
+  }
+
   .price {
-    font-size: 20px;
+    color: #000;
+    font-size: 25px;
     margin: 10px 0;
+    font-weight: bold;
   }
   
   .old-price {
     text-decoration: line-through;
-    color: red;
+    color: #666;
+    font-size: 20px;
   }
   
   .current-price {
-    color: green;
+    color: red;
     font-weight: bold;
+    font-size: 30px;
   }
   
   .buttons {
