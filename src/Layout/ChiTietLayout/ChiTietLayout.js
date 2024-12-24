@@ -59,10 +59,10 @@ const ChiTietLayout = () => {
             <p className="price">
               Giá:{" "}
               <span className="old-price">
-                {product.price.toLocaleString()} đ
+                50.000.000đ
               </span> {" "}
               <span className="current-price">
-                {product.price.toLocaleString()} đ
+                {product.price.toLocaleString()}đ
               </span>
             </p>
             <p className="description">{product.mota}</p>
