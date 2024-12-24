@@ -4,17 +4,17 @@ import "./CamKet.scss";
 const CamKet = () => {
     return (
         <div id="camket">
-            <h2 className="title">CAM KẾT VÀ QUY ĐỊNH CHUNG</h2>
-            <p className="description">
+            <div className="camket-title">CAM KẾT VÀ QUY ĐỊNH CHUNG</div>
+            <div className="camket-description">
                 Các sản phẩm của cơ sở Đồ thờ Công Hương chúng tôi đều được điêu khắc công phu, tỉ mỉ đến từng chi tiết nhỏ nhằm nâng cao thương hiệu, uy tín và đảm bảo chất lượng khi đến tay khách hàng.
-            </p>
+            </div>
             <img
                 src="https://dogovinhdinh.vn/wp-content/uploads/2020/10/camket.png"
                 alt="Logo"
                 className="img-camket"
             />
-            <h4 className="subtitle">1. Cam kết về chính sách bán hàng:</h4>
-            <p className="camket-description">
+            <div className="camket-subtitle">1. Cam kết về chính sách bán hàng:</div>
+            <div className="camket-description">
                 Với chính sách bán hàng luôn đặt chữ Tâm và Tín lên hàng đầu. Chúng tôi cam kết:
                 <ul className="camket-list1">
                     <li>
@@ -29,15 +29,15 @@ const CamKet = () => {
                         (Nếu như khách hàng yêu cầu).
                     </li>
                 </ul>
-            </p>
+            </div>
             
             <img
                 src="https://dogovinhdinh.vn/wp-content/uploads/2020/10/quydinhchung.jpg"
                 alt="Logo"
                 className="img-camket"
             />
-            <h4 className="subtitle">2. Quy định chung cho người mua hàng:</h4>
-            <p className="camket-description">
+            <div className="camket-subtitle">2. Quy định chung cho người mua hàng:</div>
+            <div className="camket-description">
                 <p>Để đảm bảo giao dịch được thành công và đảm bảo quyền lợi và nghĩa vụ của cả bên Bán và bên Mua, đề nghị quý khách vui lòng tuân thủ theo các quy định sau đây:</p>
 
                 <p>Quý khách hàng giao dịch mua bán tại website này phải đồng ý rằng:</p>
@@ -61,7 +61,7 @@ const CamKet = () => {
                         (Lý do: Tất cả phí vận chuyển chúng tôi đều thanh toán. Quý khách hủy đặt hàng đồng nghĩa chúng tôi bị thiệt hại về chi phí vận chuyển đi và chuyển hoàn toàn. Đồng thời mất thời gian của chúng tôi. Điều này thể hiện đạo đức, tư cách của người mua hàng). Nếu trường hợp này xảy ra liên tục nhiều lần, thông tin địa chỉ và số điện thoại của quý khách sẽ được gửi đến cơ quan pháp luật, quý khách sẽ phải chịu trách nhiệm trước pháp luật về hành vi lừa đảo, quấy nhiễu người bán hàng.
                     </li>
                 </ul>
-            </p>
+            </div>
         </div>
     );
 };

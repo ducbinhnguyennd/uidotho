@@ -7,41 +7,36 @@
   line-height: 1.8;
 }
 
+.camket-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.camket-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .img-camket {
-    display: block; 
-    margin: 20px auto; 
-    max-width: 100%; 
-    height: auto; 
-  }
-  
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
 .camket-list1 {
-  list-style-type: none;
   padding-left: 20px;
+}
 
-  li {
-    margin-bottom: 10px;
-    position: relative;
-
-    &:before {
-      content: "–";
-      position: absolute;
-      left: -20px;
-    }
-  }
+.camket-list1 li {
+  margin-bottom: 10px;
 }
 
 .camket-list2 {
-  list-style-type: none;
   padding-left: 20px;
+}
 
-  li {
-    margin-bottom: 10px;
-    position: relative;
-
-    &:before {
-      content: "+";
-      position: absolute;
-      left: -20px;
-    }
-  }
+.camket-list2 li {
+  margin-bottom: 10px;
 }

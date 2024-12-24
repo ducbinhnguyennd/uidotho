@@ -4,7 +4,7 @@ import "./GioiThieu.scss";
 const GioiThieu = () => {
   return (
     <div id="gioithieu">
-      <h2 className="gioi-thieu-title">Về chúng tôi</h2>
+      <div className="gioi-thieu-title">Về chúng tôi</div>
       <p>
         Đồ Thờ Công Hương là cơ sở sản xuất gỗ thuộc làng nghề Cát Đằng - Yên
         Tiến - Ý Yên - Nam Định. Cơ sở với hàng chục năm kinh nghiệm, sản xuất
@@ -55,7 +55,7 @@ const GioiThieu = () => {
         <p>Địa chỉ: ngã ba Cát Đằng, Yên Tiến, Ý Yên, Nam Định</p>
         <p>
           Fanpage:{" "}
-          <a href="https://www.facebook.com/dothoconghuong/">
+          <a href="https://www.facebook.com/dothoconghuong/" className="gioithieu-red">
             https://www.facebook.com/dothoconghuong/
           </a>
         </p>

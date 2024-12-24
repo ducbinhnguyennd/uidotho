@@ -4,7 +4,7 @@ import "./HuongDanThanhToan.scss";
 const HuongDanThanhToan = () => {
   return (
     <div id="huong-dan-thanh-toan">
-      <h2 className="title">HƯỚNG DẪN THANH TOÁN</h2>
+      <p className="thanhtoan-title">HƯỚNG DẪN THANH TOÁN</p>
       <p>
         • Quý khách chuyển khoản đặt cọc trước 10~30% giá trị đơn hàng: Khi nhận
         được tiền chúng tôi sẽ liên lạc ngay với quý khách để xác nhận đơn hàng

@@ -7,6 +7,21 @@
   color: #333;
 }
 
+.gioi-thieu-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.gioithieu-red {
+  color: red;
+  text-decoration: none;
+}
+
+.gioithieu-red:hover {
+  text-decoration: underline;
+}
+
 .gioithieu-image {
   text-align: center;
 }
@@ -19,6 +34,6 @@
 }
 
 .gioithieu-image .caption {
-    color: #666;
-    font-style: italic;
+  color: #666;
+  font-style: italic;
 }
