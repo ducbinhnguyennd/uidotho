@@ -15,7 +15,8 @@ const Contact = () => {
 
       <div className="top-bar-right">
         <p className="contact-phone">
-          Liên hệ: <span style={{ color: 'red', fontWeight: 'bold' }}>02122322</span>
+
+          Liên hệ: <span style={{color: 'red', fontWeight: 'bold'}}>0985.963.784</span>
         </p>
       </div>
       <div className="clear"></div>

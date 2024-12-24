@@ -1,12 +1,12 @@
 .divsp {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  justify-content: center;
+  padding: 10px 12%;
+  justify-items: center;
 }
+
 .namesp {
   font-size: 20px;
   font-weight: 700;
@@ -18,7 +18,6 @@
   justify-content: space-between;
   height: 47px;
   background-color: #8c6c3f;
-  display: flex;
   align-items: center;
   padding: 0 10px;
 }
@@ -37,30 +36,26 @@
 }
 
 .divtungsp {
-  width: 23%;
-  height: 500px;
-  padding: 10px;
+  height: 450px;
+  padding: 5px;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   text-align: center;
-  /* Để đặt nút thêm vào giỏ hàng ở vị trí tuyệt đối bên trong */
+  margin-bottom: 20px; 
+  display: flex;
+  flex-direction: column;
+}
 
-  img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-
-  /* Hiệu ứng hiển thị nút khi hover */
+.divtungsp img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .divtungsp .discount {
   position: absolute;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   margin: 30px 0 0 15px;
   background-color: #8c6c3f;
   height: 50px;
@@ -79,18 +74,18 @@
   align-items: center;
   gap: 10px;
   width: 100%;
+}
 
-  p,
-  h5 {
-    margin: 0;
-    flex: 1;
-  }
+.divpropsp p,
+.divpropsp h5 {
+  margin: 0;
+  flex: 1;
+}
 
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.divpropsp p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btnthemgiohang {
@@ -112,10 +107,46 @@
 }
 
 .original-price {
-    color: #000;
+  color: #000000;
+}
+.price{
+  font-weight: 500;
+  color: red;
+}
+.original-price span {
+  color: #ccc;
+  text-decoration: line-through;
 }
 
-.original-price span{
-    color: #ccc;
-    text-decoration: line-through;
+@media (max-width: 768px) {
+  .divsp {
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 10px 2%;
+  }
+
+  .divtungsp {
+    height: auto;
+    padding: 0px !important;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .divtungsp img {
+    height: 250px;
+  }
+
+  .divpropsp {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .divpropsp p,
+  .divpropsp h5 {
+    flex: none;
+  }
+
+  .btnthemgiohang {
+    display: none;
+  }
 }

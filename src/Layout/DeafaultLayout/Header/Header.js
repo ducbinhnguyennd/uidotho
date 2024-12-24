@@ -1,30 +1,44 @@
-import React from 'react'
-import './Header.scss' // Import file CSS để style
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import './Header.scss';
+import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
+
 const Header = () => {
-  const navigate = useNavigate()
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchKeyword.trim() !== '') {
+      navigate(`/search/${encodeURIComponent(searchKeyword)}`);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
-    <div className='header-container'>
-      <div className='header-left'>
-      <img
-            src="/logo.png"
-            alt="Logo"
-            className="logo"
-          />
+    <div className="header-container">
+      <div className="header-left">
+        <img src="/logo.png" alt="Logo" className="logo" />
       </div>
-      <div className='header-right'>
+      <div className="header-right">
         <input
-          type='text'
-          className='search-input'
-          placeholder='Tìm kiếm'
+          type="text"
+          className="search-input"
+          placeholder="Tìm kiếm"
+          value={searchKeyword}
+          onChange={(e) => setSearchKeyword(e.target.value)} 
+          onKeyPress={handleKeyPress}
         />
-        <button className='search-button'>
-        <FaSearch style={{ color: "#fff", fontSize: "20px", display: "inline-block" }} />
+        <button className="search-button" onClick={handleSearch}>
+          <FaSearch style={{ color: "#fff", fontSize: "20px", display: "inline-block" }} />
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
