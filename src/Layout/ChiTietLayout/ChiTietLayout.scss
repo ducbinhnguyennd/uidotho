@@ -61,7 +61,7 @@ header {
 .price {
   color: #000;
   font-size: 25px;
-  margin: 10px 0;
+  margin: 30px 0 10px 0;
   font-weight: bold;
 }
 
@@ -73,7 +73,7 @@ header {
 }
 
 .current-price {
-  color: #C00000;
+  color: #c00000;
   font-weight: bold;
   font-size: 25px;
 }
@@ -93,28 +93,69 @@ header {
 
 .buy-now,
 .contact {
-  padding: 10px 20px;
+  padding: 15px 0;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 .buy-now {
+  flex-basis: 50%;
+  max-width: 50%;
   background-color: orange;
   color: white;
 }
 
 .contact {
+  flex-basis: 50%;
+  max-width: 50%;
   background-color: green;
   color: white;
+}
+
+.buy-now:hover,
+.contact:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar {
   flex: 1;
 }
 
-footer {
+.chitiet-footer {
   text-align: center;
   margin-top: 20px;
   padding: 10px 0;
-  background-color: #f8f8f8;
 }
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 30px;
+  border-right: 1px solid #ccc;
+}
+
+.footer-image {
+  overflow: hidden;
+}
+.img-footer {
+  width: 100%;
+}
+.icon-item:last-child {
+  border-right: none;
+}
+
+
