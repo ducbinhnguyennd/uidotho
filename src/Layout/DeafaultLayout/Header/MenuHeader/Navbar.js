@@ -1,36 +1,65 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.scss"; // Đảm bảo bạn tạo file CSS riêng để quản lý style
+import "./Navbar.scss";
 
 const Navbar = ({ onMenuSelect }) => {
-  const handleSubmenuClick = (content) => {
-    if (onMenuSelect) {
-      onMenuSelect(content);
-    }
-  };
+  const [categories, setCategories] = useState([]);
+  const [menuOpen, setMenuOpen] = useState(false); // Kiểm soát menu chính
+  const [submenuOpen, setSubmenuOpen] = useState(false); // Kiểm soát menu con
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch("https://baominh.shop/theloaisanpham");
+        const data = await response.json();
+        setCategories(data);
+      } catch (error) {
+        console.error("Lỗi khi gọi API:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <ul className="menu">
-          <li className="menu-item has-submenu">
-            <span className="menu-title">
+        <div className="navbar-left">
+          <img src="/logo.png" alt="Logo" className="logo" />
+        </div>
+        <div
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
+        <ul className={`menu ${menuOpen ? "menu-open" : ""}`}>
+          <li
+            className={`menu-item has-submenu ${
+              submenuOpen ? "submenu-active" : ""
+            }`}
+            onMouseEnter={() => setSubmenuOpen(true)}
+            onMouseLeave={() => setSubmenuOpen(false)}
+          >
+            <span
+              className="menu-title"
+              onClick={() => setSubmenuOpen(!submenuOpen)}
+            >
               <i className="fas fa-bars"></i> Danh mục sản phẩm
             </span>
-            <ul className="submenu">
-              <li onClick={() => handleSubmenuClick("Nội dung Tượng Phật")}>
-                <Link to="/cart">TƯỢNG PHẬT</Link>
-              </li>
-              <li onClick={() => handleSubmenuClick("Nội dung Tượng Quan Âm")}>
-                <Link to="/thanhcong">TƯỢNG PHẬT QUAN ÂM</Link>
-              </li>
-              <li onClick={() => handleSubmenuClick("Nội dung Tượng Di Lặc")}>
-                <Link to="/tuong-di-lac">TƯỢNG PHẬT DI LẶC</Link>
-              </li>
+            <ul className={`submenu ${submenuOpen ? "submenu-open" : ""}`}>
+              {categories.map((category) => (
+                <li
+                  key={category._id}
+                  onClick={() => onMenuSelect && onMenuSelect(category.name)}
+                >
+                  <Link to={`/san-pham/${category.namekhongdau}`}>
+                    {category.name.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
-
-          {/* Các mục khác */}
           <li className="menu-item">
             <Link to="/">TRANG CHỦ</Link>
           </li>

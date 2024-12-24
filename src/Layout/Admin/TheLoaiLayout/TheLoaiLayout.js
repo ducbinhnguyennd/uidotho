@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import './TheLoaiLayout.scss'
+import { FaPlus } from 'react-icons/fa'
+import { AddTheLoai } from './AddTheLoai'
 
 function TheLoaiLayout () {
   const [data, setdata] = useState([])
+  const [isOpen,setIsOpen] =useState(false)
 
   const fetchdata = async () => {
     try {
@@ -20,6 +23,10 @@ function TheLoaiLayout () {
   }, [])
   return (
     <div>
+      <button className='btnthemtheloai'>
+        <FaPlus className='icons' onClick={() => setIsOpen(true)}/>
+        Thêm thể loại
+      </button>
       <table className='tablenhap'>
         <thead>
           <tr>
