@@ -35,9 +35,8 @@ const Navbar = ({ onMenuSelect }) => {
         </div>
         <ul className={`menu ${menuOpen ? "menu-open" : ""}`}>
           <li
-            className={`menu-item has-submenu ${
-              submenuOpen ? "submenu-active" : ""
-            }`}
+            className={`menu-item has-submenu ${submenuOpen ? "submenu-active" : ""
+              }`}
             onMouseEnter={() => setSubmenuOpen(true)}
             onMouseLeave={() => setSubmenuOpen(false)}
           >
@@ -73,26 +72,26 @@ const Navbar = ({ onMenuSelect }) => {
             <Link to="/kien-thuc-phong-thuy">KIẾN THỨC PHONG THỦY</Link>
           </li>
           <li className="menu-item has-submenu">
-            <span className="menu-title">HƯỚNG DẪN</span>
+            HƯỚNG DẪN
             <ul className="submenu">
-            <li>
-                 <Link to="/chinh-sach-van-chuyen">Chính sách vận chuyển</Link>
-               </li>
-               <li>
-                 <Link to="/huong-dan-thanh-toan">Hướng dẫn thanh toán</Link>
-               </li>
-               <li>
-                 <Link to="/huong-dan-mua-hang">Hướng dẫn mua hàng</Link>
-               </li>
-               <li>
-                 <Link to="/doi-tra">Chính sách giao hàng - đổi trả</Link>
-               </li>
-               <li>
-                 <Link to="/cam-ket">Cam kết và quy định chung</Link>
-               </li>
-               <li>
-                 <Link to="/bao-mat">Bảo mật thông tin</Link>
-               </li>
+              <li>
+                <Link to="/chinh-sach-van-chuyen">Chính sách vận chuyển</Link>
+              </li>
+              <li>
+                <Link to="/huong-dan-thanh-toan">Hướng dẫn thanh toán</Link>
+              </li>
+              <li>
+                <Link to="/huong-dan-mua-hang">Hướng dẫn mua hàng</Link>
+              </li>
+              <li>
+                <Link to="/doi-tra">Chính sách giao hàng - đổi trả</Link>
+              </li>
+              <li>
+                <Link to="/cam-ket">Cam kết và quy định chung</Link>
+              </li>
+              <li>
+                <Link to="/bao-mat">Bảo mật thông tin</Link>
+              </li>
             </ul>
           </li>
           <li className="menu-item">
