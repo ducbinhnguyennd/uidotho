@@ -78,6 +78,14 @@ header {
   font-size: 25px;
 }
 
+.description {
+  font-weight: bold;
+}
+
+.short-description {
+  line-height: 1.8;
+}
+
 .buttons {
   display: flex;
   gap: 10px;

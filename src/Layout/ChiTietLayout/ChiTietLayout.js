@@ -51,21 +51,51 @@ const ChiTietLayout = () => {
               <div className="chitiet-number-discount">13%</div>
             </div>
             <img src={product.image} alt={product.name} className="pdt-img" />
-
           </div>
 
           <div className="product-info">
             <p className="product-name">{product.name}</p>
             <p className="price">
-              Giá:{" "}
-              <span className="old-price">
-                50.000.000đ
-              </span> {" "}
+              Giá: <span className="old-price">50.000.000đ</span>{" "}
               <span className="current-price">
                 {product.price.toLocaleString()}đ
               </span>
             </p>
             <p className="description">{product.mota}</p>
+            <div className="short-description">
+              <p>
+                <span style={{ color: "red" }}>Quý khách lưu ý:</span> khi lựa
+                chọn mua bất kì sản phẩm nào nên chọn những cửa hàng có thương
+                hiệu lâu năm trên thị trường , chế độ bảo hành sản phẩm , mức độ
+                hoàn thiện chi tiết sản phẩm :
+              </p>
+              <ul>
+                <li>
+                  <strong>Cửa hàng lâu năm</strong> trên thị trường vì họ đã có
+                  chỗ đứng nhất định cả về chất lượng cũng như giá cả vì với họ
+                  uy tín quý hơn vàng
+                </li>
+                <li>
+                  <strong>Chế độ bảo hành dài lâu :</strong> bảo hành trước và
+                  sau khi mua sản phẩm , chế độ bảo hành dài lâu , khi sử dụng
+                  cũ hoặc thời tiết hanh khô nứt có thể gửi về cửa hàng bảo hành
+                  miễn phí phun mới và sửa lại sản phẩm
+                </li>
+                <li>
+                  <strong>Mức độ sản phẩm :</strong> hoàn thiên kĩ đi hết vào
+                  các nét của tác phẩm , ko quật máy làm tù hết các đường nét
+                  tượng như hàng chợ giá rẻ hoặc 1 số cửa hàng buôn bán chộp
+                  giật , mọi đường nét được chải chuốt tinh sảo. Sử dụng sơn
+                  Oseven ( O7 Paint ) dòng Sơn cao cấp nhất , hoàn thiện 2 lớp
+                  lót , 1 lớp mờ nên khi nên tượng nhìn rất mòng hàng , bụi bẩn
+                  có thể phụt rửa thoải mái mà không sợ bay sơn Tượng làm đủ
+                  kích thước chuẩn , đúng tỉ lệ, ko co , ko độn kích tượng bằng
+                  cách nâng đế tượng, giảm chiều cao và chiều sâu thân tượng
+                  .Quý khách hãy thật thông thái khi lựa chọn sản phẩm để tránh
+                  mua phải hàng kém chất lượng
+                </li>
+              </ul>
+            </div>
             <div className="buttons">
               <button className="buy-now">Đặt hàng ngay</button>
               <button className="contact">Liên hệ</button>
