@@ -5,13 +5,13 @@ import Loading from "../../components/Loading/Loading";
 import { Link } from "react-router-dom";
 import "./TheLoaiLayout.scss";
 import { FaFilter } from "react-icons/fa6";
-
+import ListBlog from "../../components/ListBlog/ListBlog";
 const TheLoaiLayout = () => {
   const { slug } = useParams();
   const [productDetails, setProductDetails] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
-  const filterRef = useRef(null); // Để tham chiếu đến menu lọc
+  const filterRef = useRef(null); 
   const filterButtonRef = useRef(null); 
 
 
@@ -54,6 +54,8 @@ const TheLoaiLayout = () => {
    
       <div className="category-sidebar">
         <CategoryList />
+        <ListBlog/>
+
       </div>
 
       <div

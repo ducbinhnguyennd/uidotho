@@ -1,6 +1,6 @@
 .container-chitiet {
   font-family: Arial, sans-serif;
-  max-width: 1000px;
+  max-width: 75%;
   margin: auto;
 }
 
@@ -162,6 +162,12 @@ header {
 }
 
 @media (max-width: 768px) {
+  .container-chitiet {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: auto;
+  }
+  
   .product-detail {
     flex-direction: column;
 

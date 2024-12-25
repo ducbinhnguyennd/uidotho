@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "./ChiTietLayout.scss";
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -7,8 +7,11 @@ import { AiOutlineDollar } from "react-icons/ai";
 import { FiLifeBuoy } from "react-icons/fi";
 import { SiZalo } from "react-icons/si";
 import { IoMdCall } from "react-icons/io";
+import CategoryList from "../../components/ListTheLoai/CategoryList";
+import ListBlog from "../../components/ListBlog/ListBlog";
+
 const ChiTietLayout = () => {
-  const { tieude } = useParams(); // Lấy "tieude" từ URL
+  const { tieude } = useParams();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +38,7 @@ const ChiTietLayout = () => {
 
     fetchProduct();
   }, [tieude]);
+ 
 
   if (isLoading) {
     return <p>Đang tải dữ liệu...</p>;
@@ -46,7 +50,11 @@ const ChiTietLayout = () => {
 
   return (
     <div className="container-chitiet">
+      
+
+      
       <div className="main">
+
         <div className="product-detail">
           <div className="product-image">
             <div className="chitiet-discount">
@@ -121,6 +129,11 @@ const ChiTietLayout = () => {
             </div>
 
           </div>
+          <div className="category-sidebar">
+        <CategoryList />
+        <ListBlog/>
+
+      </div>
         </div>
       </div>
       <div className="chitiet-footer">
