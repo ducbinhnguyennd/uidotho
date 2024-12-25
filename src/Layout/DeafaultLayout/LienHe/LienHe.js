@@ -7,19 +7,22 @@ const LienHe = () => {
             <div className="lienhe-title">Liên hệ</div>
             <div className="contact-info">
                 <div id="name-contact">
-                    Cửa hàng <span className="red">Đồ thờ Công Hương</span>
+                    Cơ sở sản xuất đồ thờ - đồ gỗ <span className="red">Đồ thờ Công Hương</span>
                 </div>
+              
                 <p className="description">
-                    Địa chỉ: Ngã ba Cát Đằng, Yên Tiến, Ý Yên, Nam Định
+                Địa chỉ: <br/>
+                    Cơ sở 1: Ngã 3 Cát Đằng, Xã Yên Tiến, Huyện Ý Yên, Tỉnh Nam Định <br/>
+                    Cơ sở 2: Ngã 3 Cát Đằng đi về hướng Ninh Bình 300m, Xã Yên Tiến, Huyên Ý Yên, Tỉnh Nam Định
                 </p>
                 <p className="description">
-                    Hotline: <span className="red">0387 988 996</span>
+                    Hotline: <span className="red">0985.963.784 - 0982.560.805</span>
                 </p>
                 <p className="description">
-                    Tên: <span className="bold">Nguyễn Văn Công</span>
+                    Tên chủ cơ sở: <span className="bold">Anh Công</span>
                 </p>
                 <p className="description">
-                    Tên: <span className="bold">Đỗ Thị Hương</span>
+                    Tên: <span className="bold">Chị Hương</span>
                 </p>
                 <p className="description">
                     Fanpage:{" "}
@@ -30,7 +33,7 @@ const LienHe = () => {
                     </a>
                 </p>
                 <p className="description">
-                    Email: <span className="red">cskh@dothoconghuong.vn</span>
+                    Email: <span className="red">ducbinhnguyennd@gmail.com</span>
                 </p>
             </div>
         </div>

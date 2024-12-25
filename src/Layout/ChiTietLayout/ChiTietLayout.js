@@ -5,7 +5,8 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { TfiReload } from "react-icons/tfi";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FiLifeBuoy } from "react-icons/fi";
-
+import { SiZalo } from "react-icons/si";
+import { IoMdCall } from "react-icons/io";
 const ChiTietLayout = () => {
   const { tieude } = useParams(); // Lấy "tieude" từ URL
   const [product, setProduct] = useState(null);
@@ -44,10 +45,7 @@ const ChiTietLayout = () => {
   }
 
   return (
-    <div className="container">
-      {/* <header>
-        <h1>{product.name}</h1>
-      </header> */}
+    <div className="container-chitiet">
       <div className="main">
         <div className="product-detail">
           <div className="product-image">
@@ -58,8 +56,8 @@ const ChiTietLayout = () => {
           </div>
 
           <div className="product-info">
-            <div className="product-name">{product.name}</div>
-            <div className="price">
+            <div className="product-name-chitiet">{product.name}</div>
+            <div className="chitietprice">
               Giá: <span className="old-price">50.000.000đ</span>{" "}
               <span className="current-price">
                 {product.price.toLocaleString()}đ
@@ -102,10 +100,26 @@ const ChiTietLayout = () => {
                 </li>
               </ul>
             </div>
+
             <div className="buttons">
-              <button className="buy-now">Đặt hàng ngay</button>
-              <button className="contact">Liên hệ</button>
+              <a
+                href="https://zalo.me/0985963784"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="buy-now"
+              >
+                <SiZalo className="icons" />
+                Zalo
+              </a>
+              <a
+                href="tel:0985963784"
+                className="contact"
+              >
+                <IoMdCall className="icons" />
+                Gọi điện
+              </a>
             </div>
+
           </div>
         </div>
       </div>

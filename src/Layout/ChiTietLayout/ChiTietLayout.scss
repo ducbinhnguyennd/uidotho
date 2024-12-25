@@ -1,4 +1,4 @@
-.container {
+.container-chitiet {
   font-family: Arial, sans-serif;
   max-width: 1000px;
   margin: auto;
@@ -12,7 +12,7 @@ header {
 .main {
   display: flex;
   gap: 20px;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 
 .product-detail {
@@ -52,13 +52,13 @@ header {
   flex: 1;
 }
 
-.product-name {
+.product-name-chitiet {
   font-size: 25px;
   font-weight: bold;
   color: #666;
 }
 
-.price {
+.chitietprice {
   color: #000;
   font-size: 25px;
   margin: 30px 0 10px 0;
@@ -93,27 +93,30 @@ header {
 
 .buy-now,
 .contact {
-  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+ justify-content: center;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
-  text-transform: uppercase;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 .buy-now {
   flex-basis: 50%;
   max-width: 50%;
-  background-color: orange;
+  background-color: #007aff; 
   color: white;
 }
 
 .contact {
   flex-basis: 50%;
   max-width: 50%;
-  background-color: green;
+  background-color: rgb(0, 128, 17);
   color: white;
 }
 
@@ -158,4 +161,10 @@ header {
   border-right: none;
 }
 
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
 
+  }
+  
+}

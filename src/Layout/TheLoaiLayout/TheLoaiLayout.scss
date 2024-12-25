@@ -1,14 +1,74 @@
 .theloailayout {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar danh mục (hiển thị luôn trên máy tính) */
+.category-sidebar {
+  display: block;
+  flex: 0 0 20%; /* Chiếm 20% chiều rộng màn hình */
+}
+
+.theloaisp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.product-name {
+  font-weight: bold;
+  color: #666;
+}
+
+.filter-button {
+  display: none; 
+  color: #000000;
+  border: none;
+ text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.category-filter {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%; 
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 99;
+}
+
+.category-filter.show {
+  left: 0;
+}
+
+
+@media (max-width: 768px) {
+  .theloailayout {
+    flex-direction: column;
   }
   
+  .category-sidebar {
+    display: none; 
+  }
+
+  .filter-button {
+    display: block;
+  }
+
+  .category-filter {
+    display: block;
+  }
+
   .theloaisp {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    flex: 1;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+}
