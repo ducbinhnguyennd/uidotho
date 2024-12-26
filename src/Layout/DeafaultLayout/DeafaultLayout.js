@@ -5,20 +5,21 @@ import { Header } from "./Header";
 import Contact from "./Header/Contact/Contact";
 import Call from "./FloatingChat/Call/Call";
 import Zalo from "./FloatingChat/Zalo/Zalo";
-import '../DeafaultLayout/DefaultLayout.scss'
+import "../DeafaultLayout/DefaultLayout.scss";
 
 function DefaultLayout({ children }) {
   return (
     <div className="container-default">
       <Contact />
       <div className="header-navbar">
-  <Header />
-  <Navbar />
-</div>
+        <Header />
+        <Navbar />
+      </div>
       <div className="content">{children}</div>
       <Footer />
       <div className="floatingbuton">
-        <Zalo />
+    
+        <Zalo onClick={() => {"https://zalo.me/0985963784"}} />
         <Call />
       </div>
     </div>

@@ -9,6 +9,7 @@ import { SiZalo } from "react-icons/si";
 import { IoMdCall } from "react-icons/io";
 import CategoryList from "../../components/ListTheLoai/CategoryList";
 import ListBlog from "../../components/ListBlog/ListBlog";
+import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
 
 const ChiTietLayout = () => {
   const { tieude } = useParams();
@@ -50,11 +51,15 @@ const ChiTietLayout = () => {
 
   return (
     <div className="container-chitiet">
-      
-
+<ThanhDinhHuong
+        breadcrumbs={[
+          { label: "Trang Chủ", link: "/" },
+          { label: product.name, link: `/chitietsanpham/${tieude}` },
+        ]}
+      />
       
       <div className="main">
-
+      
         <div className="product-detail">
           <div className="product-image">
             <div className="chitiet-discount">

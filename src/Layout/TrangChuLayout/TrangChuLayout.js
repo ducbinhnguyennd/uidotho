@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import "./TrangChuLayout.scss";
 import Loading from "../../components/Loading/Loading";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import Carousel from "../Carousel/Carousel";
+import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
+
 function TrangChuLayout() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const location = useLocation();
   const fetchdata = async () => {
     try {
       setIsLoading(true);
@@ -52,6 +54,13 @@ function TrangChuLayout() {
       {isLoading && <Loading />}
       {!isLoading && (
         <div>
+          {location.pathname !== "/" && (
+        <ThanhDinhHuong
+          breadcrumbs={[
+            { label: "Trang Chủ", link: "/" },
+          ]}
+        />
+      )}
           <Carousel />
           {data.map((item) => (
             <div key={item.name}>

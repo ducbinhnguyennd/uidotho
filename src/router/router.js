@@ -3,7 +3,7 @@ import { GioHangLayout } from "../Layout/GioHangLayout";
 import { PaySuccess } from "../Layout/ThanhToanThanhCong";
 import { TheLoaiLayout } from "../Layout/TheLoaiLayout";
 import { ChiTietLayout } from "../Layout/ChiTietLayout";
-
+import ChiTietBlog from "../components/ListBlog/ChiTietBlog";
 import LienHe from "../Layout/DeafaultLayout/LienHe/LienHe";
 import ChinhSachVanChuyen from "../Layout/DeafaultLayout/HuongDan/ChinhSachVanChuyen/ChinhSachVanChuyen";
 import HuongDanThanhToan from "../Layout/DeafaultLayout/HuongDan/HuongDanThanhToan/HuongDanThanhToan";
@@ -21,6 +21,7 @@ const publicRoutes = [
   { path: "/thanhcong", component: PaySuccess },
   { path: "/san-pham/:slug", component: TheLoaiLayout },
   { path: "/chitietsanpham/:tieude", component: ChiTietLayout },
+  { path: "/chitietblog/:tieude", component: ChiTietBlog },
   { path: "/lien-he", component: LienHe },
   { path: "/chinh-sach-van-chuyen", component: ChinhSachVanChuyen },
   { path: "/huong-dan-thanh-toan", component: HuongDanThanhToan },

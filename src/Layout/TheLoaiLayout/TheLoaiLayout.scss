@@ -1,19 +1,22 @@
-.theloailayout {
-  display: flex;
+.theloailayout-container{
   gap: 20px;
   padding: 20px 10%;
 }
+.theloailayout {
+  display: flex;
+  gap: 20px;
+  padding: 20px 5%;
+}
 
-/* Sidebar danh mục (hiển thị luôn trên máy tính) */
 .category-sidebar {
   display: block;
-  flex: 0 0 20%; /* Chiếm 20% chiều rộng màn hình */
+  // flex: 0 0 20%; /* Chiếm 20% chiều rộng màn hình */
 }
 
 .theloaisp {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
   flex: 1;
 }
 
@@ -51,8 +54,12 @@
 
 
 @media (max-width: 768px) {
+  .theloailayout-container{
+    padding: 0px 0%;
+  }
   .theloailayout {
     flex-direction: column;
+    padding: 20px 5%;
   }
   
   .category-sidebar {

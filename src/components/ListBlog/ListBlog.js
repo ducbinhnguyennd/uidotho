@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./ListBlog.scss"; 
+import { Link } from "react-router-dom"; // Import Link từ React Router
+import "./ListBlog.scss";
 
 const ListBlog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -20,14 +21,14 @@ const ListBlog = () => {
             <div className="news-thumbnail">
               <img src={blog.img_blog} alt={blog.tieude_blog} />
             </div>
-            <a
-              href={`/chitietblog/${blog.tieude_khongdau}`}
+            <Link
+              to={`/chitietblog/${blog.tieude_khongdau}`} 
               className="news-title"
               target="_blank"
               rel="noopener noreferrer"
             >
               {blog.tieude_blog}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
