@@ -2,10 +2,16 @@ import { useState, useEffect } from 'react'
 import './TheLoaiLayout.scss'
 import { FaPlus } from 'react-icons/fa'
 import { AddTheLoai } from './AddTheLoai'
+import { SanPhamLayout } from '../SanPhamLayout'
+import { XoaTheLoai } from './XoaTheLoai'
 
 function TheLoaiLayout () {
   const [data, setdata] = useState([])
-  const [isOpen,setIsOpen] =useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpenSp, setisOpenSp] = useState(false)
+  const [isOpenXoaTL, setisOpenXoaTL] = useState(false)
+
+  const [idtheloai, setidtheloai] = useState('')
 
   const fetchdata = async () => {
     try {
@@ -23,8 +29,8 @@ function TheLoaiLayout () {
   }, [])
   return (
     <div>
-      <button className='btnthemtheloai'>
-        <FaPlus className='icons' onClick={() => setIsOpen(true)}/>
+      <button className='btnthemtheloai' onClick={() => setIsOpen(true)}>
+        <FaPlus className='icons' />
         Thêm thể loại
       </button>
       <table className='tablenhap'>
@@ -43,14 +49,44 @@ function TheLoaiLayout () {
               <td>{item._id}</td>
               <td>{item.name}</td>
               <td className='tdchucnang'>
-                <button>Chi tiết</button>
-                <button>Xóa</button>
+                <button
+                  onClick={() => {
+                    setidtheloai(item._id)
+                    setisOpenSp(true)
+                  }}
+                >
+                  Chi tiết
+                </button>
+                <button
+                  onClick={() => {
+                    setidtheloai(item._id)
+                    setisOpenXoaTL(true)
+                  }}
+                >
+                  Xóa
+                </button>
                 <button>Cập nhật</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <AddTheLoai
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        fetchdata={fetchdata}
+      />
+      <SanPhamLayout
+        isOpen={isOpenSp}
+        onClose={() => setisOpenSp(false)}
+        idtheloai={idtheloai}
+      />
+      <XoaTheLoai
+        isOpen={isOpenXoaTL}
+        onClose={() => setisOpenXoaTL(false)}
+        idtheloai={idtheloai}
+        fetchdata={fetchdata}
+      />
     </div>
   )
 }

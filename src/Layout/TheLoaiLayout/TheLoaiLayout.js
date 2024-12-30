@@ -1,31 +1,119 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from "react";
+import { useParams } from "react-router-dom";
+import CategoryList from "../../components/ListTheLoai/CategoryList";
+import Loading from "../../components/Loading/Loading";
+import { Link } from "react-router-dom";
+import "./TheLoaiLayout.scss";
+import { FaFilter } from "react-icons/fa6";
+import ListBlog from "../../components/ListBlog/ListBlog";
+import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
 
 const TheLoaiLayout = () => {
   const { slug } = useParams();
   const [productDetails, setProductDetails] = useState(null);
-  console.log(slug);
+  const [loading, setLoading] = useState(false);
+  const [showFilter, setShowFilter] = useState(false);
+  const filterRef = useRef(null);
+  const filterButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        filterRef.current &&
+        !filterRef.current.contains(event.target) &&
+        filterButtonRef.current &&
+        !filterButtonRef.current.contains(event.target)
+      ) {
+        setShowFilter(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
+        setLoading(true);
         const response = await fetch(`https://baominh.shop/san-pham/${slug}`);
         const data = await response.json();
         setProductDetails(data);
       } catch (error) {
         console.error("Lỗi khi tải sản phẩm:", error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchProduct();
   }, [slug]);
 
-  if (!productDetails) return <div>Loading...</div>;
+  if (!productDetails) return <Loading />;
 
   return (
-    <div>
-      {productDetails.map((category) => (
-        <h1 key={category._id}>{category.name}</h1>
-      ))}
+    <div className="theloailayout-container">
+      <ThanhDinhHuong
+        breadcrumbs={[
+          { label: "Trang Chủ", link: "/" },
+          { label: productDetails.nametheloai, link: `/san-pham/${slug}` },
+        ]}
+      />
+      <div className="theloailayout">
+        <div className="category-sidebar">
+          <CategoryList />
+          <ListBlog />
+        </div>
+
+        <div
+          className="filter-button"
+          ref={filterButtonRef}
+          onClick={() => setShowFilter(!showFilter)}
+        >
+          <FaFilter /> Bộ Lọc
+        </div>
+
+        <div
+          className={`category-filter ${showFilter ? "show" : ""}`}
+          ref={filterRef}
+        >
+          <CategoryList />
+        </div>
+        <div className="theloaisp">
+          {loading ? (
+            <Loading />
+          ) : (
+            productDetails.sanpham.map((product) => (
+              <div
+                className="divtungsp"
+                key={product._id}
+                onClick={() =>
+                  (window.location.href = `/chitietsanpham/${product.namekhongdau}`)
+                }
+              >
+                <div className="discount">
+                  <p className="number-discount">-14%</p>
+                </div>
+                <img src={`${product.image}`} alt={product.name} />
+                <div className="product-name">{product.name}</div>
+                <div className="original-price">
+                  Giá gốc: <span>2000000đ</span>
+                </div>
+                <div className="price">{product.price} đ</div>
+                <Link to={`/chitietsanpham/${product.namekhongdau}`}>
+                  <button
+                    className="btnthemgiohang"
+                    onClick={() => setLoading(true)}
+                  >
+                    Xem chi tiết
+                  </button>
+                </Link>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     </div>
   );
 };

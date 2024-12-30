@@ -1,5 +1,7 @@
 import { Modal } from '../../../../components/Modal'
 import { useState } from 'react'
+import './AddTheLoai.scss'
+
 function AddTheLoai ({ isOpen, onClose, fetchdata }) {
   const [name, setname] = useState('')
   const handelAddTheLoai = async () => {
@@ -22,7 +24,7 @@ function AddTheLoai ({ isOpen, onClose, fetchdata }) {
     }
   }
   return (
-    <Modal>
+    <Modal isOpen={isOpen} onClose={onClose}>
       <div className='addtheloai'>
         <h2>Thêm thể loại</h2>
         <div className='input-group'>
@@ -31,11 +33,11 @@ function AddTheLoai ({ isOpen, onClose, fetchdata }) {
             type='text'
             value={name}
             onChange={e => setname(e.target.value)}
+            placeholder='Nhập tên thể loại'
           />
         </div>
         <div className='button-group'>
-          <button onClick={onClose}>Hủy</button>
-          <button onClick={handelAddTheLoai}>Thêm</button>
+          <button onClick={handelAddTheLoai} className='btnaddtl'>Thêm</button>
         </div>
       </div>
     </Modal>
