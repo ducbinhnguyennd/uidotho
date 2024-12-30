@@ -64,7 +64,7 @@ const Navbar = ({ onMenuSelect }) => {
             <Link to="/">TRANG CHỦ</Link>
           </li>
           <li className="menu-item" onClick={() => setMenuOpen(false)}>
-            <Link to="/gioi-thieu">GIỚI THIỆU</Link>
+            <Link to="/gioi-thieu-do-tho-y-yen">GIỚI THIỆU</Link>
           </li>
           <li className="menu-item" onClick={() => setMenuOpen(false)}>
             <Link to="/san-pham">SẢN PHẨM</Link>

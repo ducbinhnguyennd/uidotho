@@ -34,18 +34,18 @@ const Footer = () => {
           />
           <p>ĐỒ GỖ CÔNG HƯƠNG</p>
           <div className="address-container">
-          <a href="https://maps.app.goo.gl/z3xmqsCTZzZCacS4A"
-            target="_blank"
-            rel="noopener noreferrer" className="address">
-            Cơ sở 1: Ngã 3 Cát Đằng, Xã Yên Tiến, Huyện Ý Yên, Tỉnh Nam Định
-          </a>
-          <br/>
-          <br/>
-          <a href="https://maps.app.goo.gl/KZkD3xqo1Mgpsypt8"
-            target="_blank"
-            rel="noopener noreferrer" className="address">
-            Cơ sở 2: Ngã 3 Cát Đằng đi về hướng Ninh Bình 300m, Xã Yên Tiến, Huyên Ý Yên, Tỉnh Nam Định
-          </a>
+            <a href="https://maps.app.goo.gl/z3xmqsCTZzZCacS4A"
+              target="_blank"
+              rel="noopener noreferrer" className="address">
+              Cơ sở 1: Ngã 3 Cát Đằng, Xã Yên Tiến, Huyện Ý Yên, Tỉnh Nam Định
+            </a>
+            <br />
+            <br />
+            <a href="https://maps.app.goo.gl/KZkD3xqo1Mgpsypt8"
+              target="_blank"
+              rel="noopener noreferrer" className="address">
+              Cơ sở 2: Ngã 3 Cát Đằng đi về hướng Ninh Bình 300m, Xã Yên Tiến, Huyên Ý Yên, Tỉnh Nam Định
+            </a>
           </div>
           <p>
             <IoMdCall /> 0985.963.784 - 0982.560.805
@@ -90,10 +90,18 @@ const Footer = () => {
           </p>
           <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
           <div className='socialIcons'>
-            <FaFacebook className="icons" />
+            <FaFacebook
+              className="icons"
+              onClick={() => window.open("https://www.facebook.com/dothoconghuong/", "_blank")}
+            />
+
             <IoMdMail className="icons" />
-            <IoMdCall className="icons" />
-            <SiZalo className="icons" />
+            <IoMdCall
+              className="icons"
+              onClick={() => window.location.href = "tel:0985963784"}
+            />
+
+            <SiZalo className="icons" onClick={() => window.open("https://zalo.me/0985963784", "_blank")} />
           </div>
         </div>
       </div>

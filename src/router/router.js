@@ -29,7 +29,7 @@ const publicRoutes = [
   { path: '/doi-tra', component: DoiTra },
   { path: '/cam-ket', component: CamKet },
   { path: '/bao-mat', component: BaoMat },
-  { path: '/gioi-thieu', component: GioiThieu },
+  { path: '/gioi-thieu-do-tho-y-yen', component: GioiThieu },
   { path: '/admin', component: AdminLayout, layout: null },
   { path: '/search/:keyword', component: TimKiemLayout }
 ]

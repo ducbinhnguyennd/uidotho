@@ -3,9 +3,9 @@ import "./Carousel.scss"; // Import file CSS
 
 const Carousel = () => {
   const images = [
-    "https://noithatsondong.com/wp-content/uploads/2021/04/phong-tho-dep-5.jpg",
-    "https://dothotamquang.com/upload/images/bo-do-tho-gia-tien.jpg",
-    "https://xuonggoanlac.com/wp-content/uploads/2023/08/combo-do-tho-go-du-Lao-xin-6.jpg"
+    "../banner1.png",
+   "../banner3.png",
+   "../banner2.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -48,7 +48,7 @@ const GioiThieu = () => {
         điện thoại:
       </p>
       <p>
-        <b>0387988996</b> (Đức Bình) và <b>0976410366</b>
+        <b>0985963784</b> (Anh Công) và <b>0982560805</b> (Chị Hương)
       </p>
       <div className="contact-info">
         <h3>ĐỒ THỜ CÔNG HƯƠNG</h3>
