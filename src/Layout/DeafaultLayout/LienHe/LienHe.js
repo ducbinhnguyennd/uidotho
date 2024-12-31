@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./LienHe.scss";
+import { Helmet } from "react-helmet";
 
 const LienHe = () => {
+    
     return (
+        
         <div id="lienHe">
+            <Helmet>
+        <title>Tiêu đề mới</title>
+      </Helmet>
             <div className="lienhe-title">Liên hệ</div>
             <div className="contact-info">
                 <div id="name-contact">

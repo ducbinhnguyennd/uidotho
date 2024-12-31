@@ -7,6 +7,7 @@ import "./TheLoaiLayout.scss";
 import { FaFilter } from "react-icons/fa6";
 import ListBlog from "../../components/ListBlog/ListBlog";
 import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
+import { Helmet } from "react-helmet";
 
 const TheLoaiLayout = () => {
   const { slug } = useParams();
@@ -54,6 +55,11 @@ const TheLoaiLayout = () => {
 
   return (
     <div className="theloailayout-container">
+      <Helmet>
+        <title>{productDetails.nametheloai}</title>
+        <meta name="description" content={productDetails.nametheloai} />
+        <meta name="keywords" content={productDetails.nametheloai} />
+      </Helmet>
       <ThanhDinhHuong
         breadcrumbs={[
           { label: "Trang Chủ", link: "/" },

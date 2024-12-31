@@ -10,6 +10,9 @@ function TrangChuLayout() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
+  useEffect(() => {
+          document.title = "Trang Chủ";
+        }, []);
   const fetchdata = async () => {
     try {
       setIsLoading(true);
