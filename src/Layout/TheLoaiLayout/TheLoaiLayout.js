@@ -56,9 +56,9 @@ const TheLoaiLayout = () => {
   return (
     <div className="theloailayout-container">
       <Helmet>
-        <title>{productDetails.nametheloai}</title>
+        <title>{productDetails.nametheloai} - Đồ Thờ Công Hương</title>
         <meta name="description" content={productDetails.nametheloai} />
-        <meta name="keywords" content={productDetails.nametheloai} />
+        <meta name="keywords" content={"Đồ Thờ Công Hương, Làng nghề Cát Đằng, Yên Tiến, Ý Yên, Nam Định, Làm Mộc, Tạc Tượng, Tu Sửa Đình Chùa, Nhà Thờ"} />
       </Helmet>
       <ThanhDinhHuong
         breadcrumbs={[

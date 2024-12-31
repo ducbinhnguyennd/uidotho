@@ -5,14 +5,13 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link,useLocation } from "react-router-dom";
 import Carousel from "../Carousel/Carousel";
 import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
+import { Helmet } from "react-helmet";
 
 function TrangChuLayout() {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
-  useEffect(() => {
-          document.title = "Trang Chủ";
-        }, []);
+
   const fetchdata = async () => {
     try {
       setIsLoading(true);
@@ -54,6 +53,11 @@ function TrangChuLayout() {
 
   return (
     <div>
+      <Helmet>
+        <title>{"Đồ Thờ Đồ Gỗ Công Hương - Ý Yên Nam Định"}</title>
+        <meta name="description" content={"Đồ Thờ Đồ Gỗ Công Hương tọa lạc tại Ngã 3 Cát Đằng, xã Yên Tiến, huyện Ý Yên, tỉnh Nam Định, nơi nổi tiếng với các sản phẩm đồ thờ và đồ gỗ mỹ nghệ cao cấp. Với truyền thống lâu đời của làng nghề Ý Yên, Nam Định, nơi đây được biết đến như một trung tâm chế tác đồ thờ, đồ gỗ với sự khéo léo, tinh tế trong từng sản phẩm."} />
+        <meta name="keywords" content={"Đồ Thờ Công Hương, Làng nghề Cát Đằng, Yên Tiến, Ý Yên, Nam Định, Làm Mộc, Tạc Tượng, Tu Sửa Đình Chùa, Nhà Thờ"} />
+      </Helmet>
       {isLoading && <Loading />}
       {!isLoading && (
         <div>

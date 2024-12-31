@@ -10,6 +10,7 @@ import { IoMdCall } from "react-icons/io";
 import CategoryList from "../../components/ListTheLoai/CategoryList";
 import ListBlog from "../../components/ListBlog/ListBlog";
 import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
+import { Helmet } from "react-helmet";
 
 const ChiTietLayout = () => {
   const { tieude } = useParams();
@@ -39,7 +40,6 @@ const ChiTietLayout = () => {
 
     fetchProduct();
   }, [tieude]);
- 
 
   if (isLoading) {
     return <p>Đang tải dữ liệu...</p>;
@@ -51,15 +51,17 @@ const ChiTietLayout = () => {
 
   return (
     <div className="container-chitiet">
-<ThanhDinhHuong
+      <Helmet>
+        <title>{product.name} - Đồ Thờ Công Hương</title>
+      </Helmet>
+      <ThanhDinhHuong
         breadcrumbs={[
           { label: "Trang Chủ", link: "/" },
           { label: product.name, link: `/chitietsanpham/${tieude}` },
         ]}
       />
-      
+
       <div className="main">
-      
         <div className="product-detail">
           <div className="product-image">
             <div className="chitiet-discount">
@@ -124,21 +126,16 @@ const ChiTietLayout = () => {
                 <SiZalo className="icons" />
                 Zalo
               </a>
-              <a
-                href="tel:0985963784"
-                className="contact"
-              >
+              <a href="tel:0985963784" className="contact">
                 <IoMdCall className="icons" />
                 Gọi điện
               </a>
             </div>
-
           </div>
           <div className="category-sidebar">
-        <CategoryList />
-        <ListBlog/>
-
-      </div>
+            <CategoryList />
+            <ListBlog />
+          </div>
         </div>
       </div>
       <div className="chitiet-footer">

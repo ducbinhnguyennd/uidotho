@@ -9,14 +9,14 @@ const Contact = () => {
       <div className="top-bar-left">
         <MdLocationOn style={{ color: "#334862", fontSize: "20px", display: "inline-block" }} />
         <p className="contact-name">
-          ĐỒ THỜ CÔNG HƯƠNG, ngã ba Cát Đằng, Yên Tiến, Ý Yên, Nam Định
+          ĐỒ THỜ CÔNG HƯƠNG, Ngã 3 Cát Đằng, Yên Tiến, Ý Yên, Nam Định
         </p>
       </div>
 
       <div className="top-bar-right">
         <p className="contact-phone">
 
-          Liên hệ: <span style={{color: 'red', fontWeight: 'bold'}}>0985.963.784</span>
+          Liên hệ: <span style={{color: 'red', fontWeight: 'bold'}}>0985.963.784 - 0982.560.805</span>
         </p>
       </div>
       <div className="clear"></div>

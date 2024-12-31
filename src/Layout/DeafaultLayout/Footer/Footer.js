@@ -4,24 +4,6 @@ import { FaFacebook } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { SiZalo } from "react-icons/si";
 import { IoMdCall } from "react-icons/io";
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * Renders the footer section of the webpage including company information,
- * contact details, and navigation links.
- * 
- * The footer contains:
- * - Company logo and address links to two locations.
- * - Contact information with phone numbers and email.
- * - Informational links such as about us, contact, shipping policy, etc.
- * - A subscription form for consultations.
- * - Social media icons for connecting with the company.
- * 
- * This component uses various icons from react-icons for visual representation
- * and applies styles from the associated CSS classes to structure and format
- * the content.
- */
-
-/******  52a52a3c-50de-47a0-8894-76d7be5d67d0  *******/
 const Footer = () => {
   return (
     <div className='footer'>
