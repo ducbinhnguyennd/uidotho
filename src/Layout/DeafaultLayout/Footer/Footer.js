@@ -36,7 +36,7 @@ const Footer = () => {
             <IoMdMail /> ducbinhnguyennd@gmail.com
           </p>
         </div>
-        <div style={{ display: 'flex', height: '500px', alignItems: 'center' }}>
+        <div className="crack-column-tong">
 
           <div class="crack-column"></div>
         </div>
@@ -62,7 +62,8 @@ const Footer = () => {
         </div>
 
 
-        <div style={{ display: 'flex', height: '500px', alignItems: 'center' }}>
+        <div className="crack-column-tong">
+
           <div class="crack-column"></div>
         </div>
         <div className='column'>

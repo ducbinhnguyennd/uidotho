@@ -32,12 +32,17 @@ const Navbar = ({ onMenuSelect }) => {
         <div className="navbar-left">
           <img src="/logo.png" alt="Logo" className="logo" />
         </div>
-        <div className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
-  {menuOpen ? "✖" : "☰"}
-</div>
+        <div
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✖" : "☰"}
+        </div>
         <ul className={`menu ${menuOpen ? "menu-open" : ""}`}>
           <li
-            className={`menu-item has-submenu ${submenuOpen ? "submenu-active" : ""}`}
+            className={`menu-item has-submenu ${
+              submenuOpen ? "submenu-active" : ""
+            }`}
             onMouseEnter={() => setSubmenuOpen(true)}
             onMouseLeave={() => setSubmenuOpen(false)}
           >
@@ -49,10 +54,7 @@ const Navbar = ({ onMenuSelect }) => {
             </span>
             <ul className={`submenu ${submenuOpen ? "submenu-open" : ""}`}>
               {categories.map((category) => (
-                <li
-                  key={category._id}
-                  onClick={handleSubmenuClick}
-                >
+                <li key={category._id} onClick={handleSubmenuClick}>
                   <Link to={`/san-pham/${category.namekhongdau}`}>
                     {category.name.toUpperCase()}
                   </Link>
@@ -67,10 +69,10 @@ const Navbar = ({ onMenuSelect }) => {
             <Link to="/gioi-thieu-do-tho-y-yen">GIỚI THIỆU</Link>
           </li>
           <li className="menu-item" onClick={() => setMenuOpen(false)}>
-            <Link to="/san-pham">SẢN PHẨM</Link>
+            <Link to="/">SẢN PHẨM</Link>
           </li>
           <li className="menu-item" onClick={() => setMenuOpen(false)}>
-            <Link to="/kien-thuc-phong-thuy">KIẾN THỨC PHONG THỦY</Link>
+            <Link to="/">KIẾN THỨC PHONG THỦY</Link>
           </li>
           <li
             className="menu-item has-submenu"

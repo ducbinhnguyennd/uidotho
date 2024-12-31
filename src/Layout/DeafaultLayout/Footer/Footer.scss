@@ -101,7 +101,10 @@
     }
   }
 }
+.crack-column-tong {
+  display: flex; height: 500px; align-items : center;
 
+}
 .crack-column {
   position: relative;
   width: 4px;
@@ -119,7 +122,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 20px 7%;
+    padding: 20px 20px;
     .column {
       max-width: 100%;
     
@@ -129,10 +132,9 @@
   .container {
     display: block; /* Chuyển sang block để xếp dọc từng cột */
   }
-
-  .crack-column {
-    display: none; 
+.crack-column-tong{
+  display: none; 
     height: 5%;
+}
 
-  }
 }
