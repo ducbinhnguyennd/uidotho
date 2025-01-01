@@ -6,7 +6,7 @@ function AddTheLoai ({ isOpen, onClose, fetchdata }) {
   const [name, setname] = useState('')
   const handelAddTheLoai = async () => {
     try {
-      const response = await fetch('http://localhost:3010/posttheloai', {
+      const response = await fetch('https://baominh.shop/posttheloai', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

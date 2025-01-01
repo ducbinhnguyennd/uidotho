@@ -21,7 +21,7 @@ function AddSanPham ({ isOpen, onClose, idtheloai, fetchData }) {
       }
 
       const response = await fetch(
-        `http://localhost:3010/postsanpham/${idtheloai}`,
+        `https://baominh.shop/postsanpham/${idtheloai}`,
         {
           method: 'POST',
           body: formData

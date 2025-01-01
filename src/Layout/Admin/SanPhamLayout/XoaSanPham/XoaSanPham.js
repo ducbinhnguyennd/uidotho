@@ -6,7 +6,7 @@ function XoaSanPham ({ isOpen, onClose, idsanpham, fetchdata }) {
   const handleXoaSanPham = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3010/deletesanpham/${idsanpham}`,
+        `https://baominh.shop/deletesanpham/${idsanpham}`,
         {
           method: 'POST',
           headers: {

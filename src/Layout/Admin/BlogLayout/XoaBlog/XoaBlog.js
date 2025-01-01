@@ -6,7 +6,7 @@ function XoaBlog ({ isOpen, onClose, idblog, fetchdata }) {
   const handleXoaBlog = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3010/deleteblog/${idblog}`,
+        `https://baominh.shop/deleteblog/${idblog}`,
         {
           method: 'POST',
           headers: {

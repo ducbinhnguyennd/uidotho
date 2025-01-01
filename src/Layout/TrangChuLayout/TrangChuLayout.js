@@ -101,7 +101,7 @@ function TrangChuLayout() {
                       <p className="number-discount">13%</p>
                     </div>
                     <img src={`${sanpham.image}`} alt="" />
-                    <div>{sanpham.name}</div>
+                    <div className="name-sp">{sanpham.name}</div>
                     <div className="original-price">
                       Giá gốc: <span>50.000.000đ</span>
                     </div>

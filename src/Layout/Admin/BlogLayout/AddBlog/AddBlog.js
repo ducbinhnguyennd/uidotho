@@ -17,7 +17,7 @@ function AddBlog ({ isOpen, onClose, fetchdata }) {
         formData.append('image', file)
       }
 
-      const response = await fetch('http://localhost:3010/postblog', {
+      const response = await fetch('https://baominh.shop/postblog', {
         method: 'POST',
         body: formData
       })

@@ -13,10 +13,10 @@ function SanPhamLayout ({ isOpen, onClose, idtheloai }) {
   const [loading, setloading] = useState(true)
 const fetchdata = async () => {
   if (idtheloai) {
-    setloading(true) // Đặt loading thành true khi bắt đầu tải
+    setloading(true)
     try {
       const response = await fetch(
-        `http://localhost:3010/getsanpham/${idtheloai}`
+        `https://baominh.shop/getsanpham/${idtheloai}`
       )
       if (response.ok) {
         const data = await response.json()
@@ -25,10 +25,10 @@ const fetchdata = async () => {
     } catch (error) {
       console.error(error)
     } finally {
-      setloading(false) // Đặt loading thành false khi kết thúc
+      setloading(false) 
     }
   } else {
-    setloading(false) // Đặt loading thành false nếu idtheloai không tồn tại
+    setloading(false) 
   }
 }
 

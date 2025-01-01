@@ -33,7 +33,7 @@
 }
 
 .divtungsp {
-  height: 450px;
+  height: 440px;
   padding: 5px;
   overflow: hidden;
   border-radius: 15px;
@@ -44,6 +44,15 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.name-sp {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .divtungsp:hover {
   transform: translateY(-12px);

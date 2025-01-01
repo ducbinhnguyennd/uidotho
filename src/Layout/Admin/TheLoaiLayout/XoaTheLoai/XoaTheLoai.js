@@ -9,7 +9,7 @@ function XoaTheLoai ({ isOpen, onClose, idtheloai, fetchdata }) {
   const handlexoatheloai = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3010/deletetheloai/${idtheloai}`,
+        `https://baominh.shop/deletetheloai/${idtheloai}`,
         {
           method: 'POST',
           headers: {
