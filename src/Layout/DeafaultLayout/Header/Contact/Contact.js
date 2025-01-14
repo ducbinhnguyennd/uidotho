@@ -15,7 +15,7 @@ const Contact = () => {
         />
         <p className="contact-name">
           <a
-            href="https://www.google.com/maps?q=Ngã+3+Cát+Đằng,+Yên+Tiến,+Ý+Yên,+Nam+Định"
+            href="https://maps.app.goo.gl/4t4zMgHW8g3GGMc88"
             target="_blank"
             rel="noopener noreferrer"
             style={{ textDecoration: "none", color: "inherit" }}
