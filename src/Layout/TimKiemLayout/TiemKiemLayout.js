@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './TimKiemLayout.scss';
-
+import { Link } from "react-router-dom";
 const SearchResults = () => {
   const { keyword } = useParams();
   const [results, setResults] = useState([]); 
@@ -40,14 +40,16 @@ const SearchResults = () => {
         <p>Không tìm thấy sản phẩm nào.</p>
       ) : (
         <div className="results-container">
-          {results.map((item) => (
-            <div key={item._id} className="result-item">
-              <img src={item.image} alt={item.name} className="result-image" />
-              <h3>{item.name}</h3>
-              <p>{item.price.toLocaleString()} đ</p>
-            </div>
-          ))}
-        </div>
+  {results.map((item) => (
+    <div key={item._id} className="result-item">
+      <Link to={`/chitietsanpham/${item.namekhongdau}`} className="product-link">
+        <img src={item.image} alt={item.name} className="result-image" />
+        <h3>{item.name}</h3>
+        <p>{item.price.toLocaleString()} đ</p>
+      </Link>
+    </div>
+  ))}
+</div>
       )}
     </div>
   );
