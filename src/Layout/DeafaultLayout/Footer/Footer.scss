@@ -45,7 +45,10 @@
       li {
         margin: 8px 0;
         transition: color 0.3s ease, transform 0.3s ease;
-
+        a {
+          text-decoration: none; 
+          color: inherit; 
+        }
         &:hover {
           color: #ffd700;
           transform: translateX(5px);

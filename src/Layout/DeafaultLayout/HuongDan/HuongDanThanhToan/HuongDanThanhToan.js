@@ -16,7 +16,7 @@ const HuongDanThanhToan = () => {
       </p>
       <h4>QUÝ KHÁCH CHUYỂN TIỀN CHO CHÚNG TÔI THEO THÔNG TIN TÀI KHOẢN SAU:</h4>
       <p>
-        Chủ tài khoản: <span className="bold">NGUYỄN ĐỨC BÌNH</span>
+        Chủ tài khoản: <span className="bold">NGUYỄN VĂN CÔNG</span>
       </p>
       <ul>
         <li>

@@ -4,6 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { SiZalo } from "react-icons/si";
 import { IoMdCall } from "react-icons/io";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className='footer'>
@@ -43,11 +44,11 @@ const Footer = () => {
         <div className='column'>
           <h3>THÔNG TIN</h3>
           <ul>
-            <li>Về chúng tôi</li>
-            <li>Liên hệ</li>
-            <li>Chính sách giao hàng - đổi trả</li>
-            <li>Hướng dẫn mua hàng</li>
-            <li>Hướng dẫn thanh toán</li>
+            <li><Link to={"/"}>Về chúng tôi</Link></li>
+            <li><Link to={"/lien-he"}>Liên hệ</Link></li>
+            <li><Link to={"/doi-tra"}>Chính sách giao hàng - đổi trả</Link></li>
+            <li><Link to={"/huong-dan-mua-hang"}>Hướng dẫn mua hàng</Link></li>
+            <li><Link to={"/huong-dan-thanh-toan"}>Hướng dẫn thanh toán</Link></li>
             <li>Kiến Thức Phong Thủy</li>
           </ul>
           <h3>ĐĂNG KÝ TƯ VẤN</h3>

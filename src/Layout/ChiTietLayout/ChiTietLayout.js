@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ChiTietLayout.scss";
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -78,7 +78,10 @@ const ChiTietLayout = () => {
                 {product.price.toLocaleString()}đ
               </span>
             </div>
-            <div className="description">{product.mota}</div>
+            <div
+              className="description"
+              dangerouslySetInnerHTML={{ __html: product.mota }}
+            ></div>
             <div className="short-description">
               <p>
                 <span style={{ color: "red", fontWeight: "bold" }}>

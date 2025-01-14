@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./LienHe.scss";
 import { Helmet } from "react-helmet";
 

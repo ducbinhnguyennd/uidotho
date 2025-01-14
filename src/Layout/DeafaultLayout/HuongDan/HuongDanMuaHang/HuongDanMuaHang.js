@@ -34,7 +34,7 @@ const HuongDanMuaHang = () => {
         <strong>Bước 4:</strong> Khách hàng được mở kiểm tra sản phẩm trước khi
         thanh toán. Nếu cần phản ánh bất cứ điều gì về sản phẩm cũng như dịch
         vụ vận chuyển, quý khách vui lòng gọi ngay cho chúng tôi theo số{" "}
-        <strong>Hotline: 0387988996</strong>.{" "}
+        <strong>Hotline: 0985963784</strong>.{" "}
         <a href="/doi-tra" className="muahang-red">Xem thêm quy định đổi trả sản phẩm tại đây</a>.
       </p>
       <p>
@@ -47,7 +47,7 @@ const HuongDanMuaHang = () => {
       <div className="muahang-subtitle">2. ĐẶT HÀNG QUA ĐIỆN THOẠI:</div>
       <p>
         <strong>Bước 1:</strong> Quý khách gọi vào số{" "}
-        <strong>Hotline: 0387988996</strong> và vui lòng cung cấp cho chúng tôi
+        <strong>Hotline: 0985963784</strong> và vui lòng cung cấp cho chúng tôi
         các thông tin sau:
       </p>
       <ul>

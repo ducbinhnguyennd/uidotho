@@ -12,7 +12,7 @@ const DoiTra = () => {
       <h4 className="subtitle">1– Khi nhận hàng từ nhân viên giao hàng:</h4>
       <p className="doitra-text">
         Quý khách tiến hành mở hàng kiểm tra sản phẩm. Nếu sản phẩm không đúng như thông tin đặt hàng, chất lượng kém
-        quý khách có thể liên lạc ngay với tôi theo số <strong>0387988996</strong> để được giải quyết. Nếu không đảm bảo
+        quý khách có thể liên lạc ngay với tôi theo số <strong>0985963784</strong> để được giải quyết. Nếu không đảm bảo
         chất lượng chúng tôi sẽ hoàn lại 100% tiền cọc cho quý khách.
       </p>
       <h4 className="subtitle">2– Sau khi nhận sản phẩm:</h4>
