@@ -64,9 +64,8 @@ const ChiTietLayout = () => {
       <div className="main">
         <div className="product-detail">
           <div className="product-image">
-            <div className="chitiet-discount">
-              <div className="chitiet-number-discount">13%</div>
-            </div>
+          <img className="discount-logo2" src="/logo.png" />
+           
             <img src={product.image} alt={product.name} className="pdt-img" />
           </div>
 

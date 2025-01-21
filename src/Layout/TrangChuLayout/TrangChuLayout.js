@@ -96,9 +96,7 @@ function TrangChuLayout() {
                       (window.location.href = `/chitietsanpham/${sanpham.namekhongdau}`)
                     }
                   >
-                    <div className="discount">
-                      <p className="number-discount">13%</p>
-                    </div>
+                    <img className="discount-logo2" src="./logo.png" />
                     <img src={`${sanpham.image}`} alt="" />
                     <div className="name-sp">{sanpham.name}</div>
                     <div className="original-price">
