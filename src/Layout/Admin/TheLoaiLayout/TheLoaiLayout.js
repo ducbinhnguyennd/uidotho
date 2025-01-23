@@ -1,43 +1,44 @@
-import { useState, useEffect } from 'react'
-import './TheLoaiLayout.scss'
-import { FaPlus } from 'react-icons/fa'
-import { AddTheLoai } from './AddTheLoai'
-import { SanPhamLayout } from '../SanPhamLayout'
-import { XoaTheLoai } from './XoaTheLoai'
+import { useState, useEffect } from "react";
+import "./TheLoaiLayout.scss";
+import { FaPlus } from "react-icons/fa";
+import { AddTheLoai } from "./AddTheLoai";
+import { SanPhamLayout } from "../SanPhamLayout";
+import { XoaTheLoai } from "./XoaTheLoai";
+import { CapNhatTheLoai } from "./UpdateTheLoai/CapNhatTheLoai";
+function TheLoaiLayout() {
+  const [data, setdata] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenSp, setisOpenSp] = useState(false);
+  const [isOpenXoaTL, setisOpenXoaTL] = useState(false);
+  const [isOpenCapNhat, setisOpenCapNhat] = useState(false);
+  const [currentName, setCurrentName] = useState("");
 
-function TheLoaiLayout () {
-  const [data, setdata] = useState([])
-  const [isOpen, setIsOpen] = useState(false)
-  const [isOpenSp, setisOpenSp] = useState(false)
-  const [isOpenXoaTL, setisOpenXoaTL] = useState(false)
-
-  const [idtheloai, setidtheloai] = useState('')
+  const [idtheloai, setidtheloai] = useState("");
 
   const fetchdata = async () => {
     try {
-      const response = await fetch('https://baominh.shop/theloaisanpham')
+      const response = await fetch("https://baominh.shop/theloaisanpham");
       if (response.ok) {
-        const data = await response.json()
-        setdata(data)
+        const data = await response.json();
+        setdata(data);
       }
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
   useEffect(() => {
-    fetchdata()
-  }, [])
+    fetchdata();
+  }, []);
   return (
     <div>
-      <button className='btnthemtheloai' onClick={() => setIsOpen(true)}>
-        <FaPlus className='icons' />
+      <button className="btnthemtheloai" onClick={() => setIsOpen(true)}>
+        <FaPlus className="icons" />
         Thêm thể loại
       </button>
-      <table className='tablenhap'>
+      <table className="tablenhap">
         <thead>
           <tr>
             <th>STT</th>
-            <th>ID</th>
             <th>Tên thể loại</th>
             <th>Chức năng</th>
           </tr>
@@ -46,26 +47,37 @@ function TheLoaiLayout () {
           {data.map((item, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>{item._id}</td>
               <td>{item.name}</td>
-              <td className='tdchucnang'>
-                <button
+              <td className="tdchucnang1">
+                <div
+                  className="chitiet"
                   onClick={() => {
-                    setidtheloai(item._id)
-                    setisOpenSp(true)
+                    setidtheloai(item._id);
+                    setisOpenSp(true);
                   }}
                 >
                   Chi tiết
-                </button>
-                <button
+                </div>
+
+                <div
+                  className="capnhat"
                   onClick={() => {
-                    setidtheloai(item._id)
-                    setisOpenXoaTL(true)
+                    setidtheloai(item._id);
+                    setCurrentName(item.name);
+                    setisOpenCapNhat(true);
+                  }}
+                >
+                  Cập nhật
+                </div>
+                <div
+                  className="xoatheloai"
+                  onClick={() => {
+                    setidtheloai(item._id);
+                    setisOpenXoaTL(true);
                   }}
                 >
                   Xóa
-                </button>
-                <button>Cập nhật</button>
+                </div>
               </td>
             </tr>
           ))}
@@ -87,8 +99,15 @@ function TheLoaiLayout () {
         idtheloai={idtheloai}
         fetchdata={fetchdata}
       />
+      <CapNhatTheLoai
+        isOpen={isOpenCapNhat}
+        onClose={() => setisOpenCapNhat(false)}
+        idtheloai={idtheloai}
+        currentName={currentName}
+        fetchdata={fetchdata}
+      />
     </div>
-  )
+  );
 }
 
-export default TheLoaiLayout
+export default TheLoaiLayout;
