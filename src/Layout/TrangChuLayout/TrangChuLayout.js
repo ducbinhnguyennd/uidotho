@@ -5,7 +5,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "../Carousel/Carousel";
 import ThanhDinhHuong from "../../components/ThanhDinhHuong/ThanhDinhHuong";
-import { Helmet } from "react-helmet";
+import { canUseDOM, Helmet } from "react-helmet";
 
 function TrangChuLayout() {
   const [data, setdata] = useState([]);
